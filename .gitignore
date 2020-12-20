@@ -11,6 +11,9 @@
 # http://github.com/RailsApps/rails-composer/issues
 #----------------------------------------------------------------------------
 
+
+x/
+
 # add /config/database.yml if it contains passwords
 /config/ldap.yml
 /config/database.yml
