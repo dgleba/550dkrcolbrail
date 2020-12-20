@@ -1,0 +1,28 @@
+
+
+Status:
+
+
+
+
+Goal.
+
+    create rails 6 app fresh  preferably in docker
+    try devisejwt to use both web and api at once.
+
+
+
+_____________
+
+rails 6 docker
+
+try..
+https://engineering.adwerx.com/rails-on-docker-compose-7e2cf235fa0e
+
+
+https://yizeng.me/2019/11/09/setup-a-ruby-on-rails-6-api-project-with-docker-compose/
+curl -sSL https://get.rvm.io | bash -s stable --rails
+
+_____________
+
+

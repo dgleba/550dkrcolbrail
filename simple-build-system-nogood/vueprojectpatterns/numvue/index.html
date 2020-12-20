@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <!-- don't cache files. try to get fresh ones sooner. -->
+  <!-- - -->
+  <meta http-equiv='cache-control' content='no-cache'>
+  <!-- <meta http-equiv='cache-control' content='max-age=61'> -->
+  <meta http-equiv='expires' content='0'>
+  <meta http-equiv='pragma' content='no-cache'>
+
+  
+  <title>PWA - New Service Worker available</title>
+  <style>
+    #snackbar {
+      visibility: hidden;
+      min-width: 250px;
+      margin-left: -125px;
+      background-color: #333;
+      color: #fff;
+      text-align: center;
+      border-radius: 2px;
+      padding: 16px;
+      position: fixed;
+      z-index: 1;
+      left: 50%;
+      bottom: 30px;
+    }
+
+    #snackbar.show {
+      visibility: visible;
+      -webkit-animation: fadein 0.5s;
+      animation: fadein 0.5s;
+    }
+
+    @-webkit-keyframes fadein {
+      from {
+        bottom: 0;
+        opacity: 0;
+      }
+      to {
+        bottom: 30px;
+        opacity: 1;
+      }
+    }
+
+    @keyframes fadein {
+      from {
+        bottom: 0;
+        opacity: 0;
+      }
+      to {
+        bottom: 30px;
+        opacity: 1;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <img src="./dog.jpg" />
+  <!-- The actual snackbar -->
+  <div id="snackbar"  onclick="myFunction21()" > A new version of this app is available. Click <a id="reload">here</a> to update.</div>
+  <p>index v 6</p>
+  
+  <button type="button" id="b22" onclick="color22()">Set color</button>
+  
+  <p id="ver23a" onclick="ver23()"> Click me for JS ver...</p>   
+  
+</body>
+<script>
+
+  let newWorker;
+
+  function showUpdateBar() {
+    let snackbar = document.getElementById('snackbar');
+    snackbar.className = 'show';
+  }
+
+  // The click event on the pop up notification
+  document.getElementById('reload').addEventListener('click', function(){
+    newWorker.postMessage({ action: 'skipWaiting' });
+  });
+
+  if ('serviceWorker' in navigator) {
+
+    navigator.serviceWorker.register('/service-worker.js').then(reg => {
+      reg.addEventListener('updatefound', () => {
+        // A wild service worker has appeared in reg.installing!
+        newWorker = reg.installing;
+
+        newWorker.addEventListener('statechange', () => {
+          // Has network.state changed?
+          switch (newWorker.state) {
+            case 'installed':
+              if (navigator.serviceWorker.controller) {
+                // new update available
+                showUpdateBar();
+              }
+              // No update available
+              break;
+          }
+        });
+      });
+    });
+
+    let refreshing;
+    navigator.serviceWorker.addEventListener('controllerchange', function () {
+      if (refreshing) return;
+      window.location.reload();
+      refreshing = true;
+    });
+  }
+
+</script>
+<!-- our code -->
+<script src="mainscript.js"></script>
+</html>

@@ -1,0 +1,98 @@
+
+
+
+
+        <readme>
+            "" See readme.notes..md " 
+
+          </readme>
+          <br>
+                   <readme>
+             'Error in v-on handler: "TypeError: Cannot
+            read property 'put' of undefined"'
+            
+          </readme>
+
+          
+<nav class="navbar navbar-expand-sm navbar-light bg-blue">
+  <div class="tbd--collapse">
+    <ul class="navbar-nav ">
+      <li class="nav-item">
+        <router-link to="/" class="nav-link">Home</router-link>
+      </li>
+      <li class="nav-item">
+        <router-link to="/posts" class="nav-link">Posts</router-link>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+
+<li class="nav-item">
+  <router-link to="/create" class="nav-link">Create Post</router-link>
+</li>
+
+
+<div class="row">
+  <td class="float-right">
+
+  </td>
+</div>
+
+
+
+<td>
+<button class="btn btn-danger"
+    @click.prevent="deletePost(post._id);"> Delete   </button>
+</td >
+
+
+<br />
+
+.fade - enter - active,
+.fade - leave - active {
+  transition: opacity 0.5s;
+}
+.fade - enter,
+.fade - leave - active {
+  opacity: 0;
+}
+
+</div>
+
+navbar-collapse bg-dark navbar-dark
+
+class="container"
+
+
+    < !--
+      < transition name = "fade" >
+      </transition >
+  -->
+
+  < !-- < h1 > Posts</h1 > -->
+
+  post: {
+  title: "",
+    body: "",
+      rtype: "",
+        _id: "",
+          id: ""
+},
+
+
+[vue - router] missing param for named route "edit": Expected "id" to be defined
+Download the Vue Devtools extension for a better development experience:
+  https://github.com/vuejs/vue-devtools   
+
+  post: {
+    id: "",
+      _id: ""
+  },
+
+mainlists: {
+  title: "",
+    body: "",
+      rtype: "",
+        _id: ""
+},

@@ -1,0 +1,60 @@
+
+Typical appliction pattern
+
+    one main table for data and supporting lookup lists for autocomplete suggestions.
+
+
+main_list = the main datatable for the app.
+
+
+
+~~ supporting tables with lists for autocomplete suggestions.
+
+
+category_lukup
+
+tag_lukup
+
+name_lukup
+
+employee_lukup
+
+
+machine_lukup
+
+equipment_lukup
+
+asset_lukup
+
+operation_lukup
+
+
+
+
+----------------------------------------------------
+Title:  .
+-----------------------2019-02-01[Feb-Fri]15-23PM
+
+ref
+
+
+good..  http://www.informit.com/articles/article.aspx?p=131025&seqNum=3
+
+
+
+https://stackoverflow.com/questions/1661197/what-characters-are-valid-for-javascript-variable-names
+https://stackoverflow.com/questions/1661197/what-characters-are-valid-for-javascript-variable-names
+https://mothereff.in/js-variables
+
+
+https://github.com/rubocop-hq/ruby-style-guide#naming
+
+https://github.com/airbnb/javascript
+https://github.com/airbnb/javascript#naming-conventions
+
+
+
+https://www.w3schools.com/js/js_conventions.asp
+
+
+----------------------------------------------------

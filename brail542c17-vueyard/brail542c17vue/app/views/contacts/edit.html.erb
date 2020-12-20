@@ -1,0 +1,17 @@
+
+<%= content_tag :div,
+  id: "hello-vue",
+  data: {
+    message: "Hello!",
+    name: "David"
+  }.to_json do %>
+<% end %> 
+
+<!-- But I prefer it to look like this -->
+    
+<% props = {
+    contact: @contact
+  }.to_json
+%>
+<div id="contactApp" data="<%= props %>"></div>
+

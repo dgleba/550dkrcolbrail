@@ -1,0 +1,14 @@
+
+can login and go to index page.
+
+backend working.
+brail484b53-pmdsdata7_srv_file_test_nuxtrl__2019.10.26_10.59.21
+
+frontend working.
+railnuxt490-pmdsdata7_srv_file_test_nuxtrl__2019.10.26_10.59.41
+
+
+
+
+
+

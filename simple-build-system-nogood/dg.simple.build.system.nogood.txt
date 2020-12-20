@@ -1,0 +1,8 @@
+
+This idea didn't pan out.
+
+Just use a proper build system like vue cli
+
+
+C:\n\sfile\computer\vuepouch\vueprojectpatterns\concat-all-js-css-html-onefile-listo429\code\500js
+

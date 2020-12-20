@@ -1,0 +1,157 @@
+
+
+
+----------------------------------------------------
+Title:  .
+-----------------------2019-06-05[Jun-Wed]07-10AM
+
+status.
+	works!!!!!
+
+could use cleaning.
+capitalization.
+move server to a `server` folder
+add nav bar
+fix up alerts - more detail
+
+
+
+albe@pmdsdata7:/srv/file/test/vueauth$ 
+git clone https://github.com/didinj/mevn-stack-vue-2.git b465djamware-vueauth
+Cloning into 'b465djamware-vueauth'...
+
+
+
+----------------------------------------------------
+
+
+
+
+----------------------------------------------------
+Title:  .
+-----------------------2019-10-28[Oct-Mon]09-51AM
+
+try again..
+
+git clone https://github.com/didinj/mevn-stack-vue-2.git b465djamware-vueauth
+
+
+https://www.djamware.com/post/5ac8338780aca714d19d5b9e/securing-mevn-stack-vuejs-2-web-application-using-passport
+
+
+2019-10-28_Mon_09.58-AM
+
+albe@pmdsdata7:/srv/file/test/vueauth$ 
+git clone https://github.com/didinj/mevn-stack-vue-2.git b465djamware-vueauth
+Cloning into 'b465djamware-vueauth'...
+
+
+just use 482dkr mongo simple with no password
+
+
+
+npm start for back end
+
+  npm start
+  
+  
+-fix User to models/user.js - lowercase.
+
+npm run dev
+
+
+on local gui ubuntu on ubu398h.redwe458.vm.88.39 
+  cors blocked 
+
+https://medium.com/@alexishevia/using-cors-in-express-cac7e29b005b
+added cors
+just use cors npm package.
+
+fixed state:"" in register.vue
+
+change ip from localhost to 10.4.1.228 in .vue files.
+
+
+
+
+
+----------------------------------------------------
+
+===================================================
+
+
+sftp://192.168.88.39/srv/web/mevn-stack-vue-2/_this.git.remote.txt
+
+
+	origin	https://github.com/didinj/mevn-stack-vue-2.git (fetch)
+	origin	https://github.com/didinj/mevn-stack-vue-2.git (push)
+
+
+  https://github.com/didinj/mevn-stack-vue-2.git
+  
+  
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+====================================================
+
+
+----------------------------------------------------
+Title:  
+	PASSPORT VUE LOGIN
+	
+----------------------- 2019-06-05[Jun-Wed]06-55AM
+
+
+albe@vamp398:~$ z mev
+albe@vamp398:/srv/web/mevn-stack-vue-2$ npm start
+
+
+  Build complete.
+
+  Tip: built files are meant to be served over an HTTP server.
+  Opening index.html over file:// won't work.
+
+internal/modules/cjs/loader.js:613
+    throw err;
+    ^
+
+Error: Cannot find module '../models/user'
+Require stack:
+- /srv/web/mevn-stack-vue-2/config/passport.js
+- /srv/web/mevn-stack-vue-2/routes/book.js
+- /srv/web/mevn-stack-vue-2/app.js
+- /srv/web/mevn-stack-vue-2/bin/www
+    at Function.Module._resolveFilename (internal/modules/cjs/loader.js:610:15)
+    at Function.Module._load (internal/modules/cjs/loader.js:526:27)
+    at Module.require (internal/modules/cjs/loader.js:666:19)
+    at require (internal/modules/cjs/helpers.js:16:16)
+    at Object.<anonymous> (/srv/web/mevn-stack-vue-2/config/passport.js:5:12)
+    at Module._compile (internal/modules/cjs/loader.js:759:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:770:10)
+    at Module.load (internal/modules/cjs/loader.js:628:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:555:12)
+    at Module.require (internal/modules/cjs/loader.js:666:19)
+    at require (internal/modules/cjs/helpers.js:16:16)
+    at Object.<anonymous> (/srv/web/mevn-stack-vue-2/routes/book.js:6:1)
+    at Module._compile (internal/modules/cjs/loader.js:759:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:770:10)
+    at Module.load (internal/modules/cjs/loader.js:628:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:555:12)
+npm ERR! code ELIFECYCLE
+npm ERR! errno 1
+npm ERR! mevn-secure@1.0.0 start: `npm run build && node ./bin/www`
+npm ERR! Exit status 1
+npm ERR!
+npm ERR! Failed at the mevn-secure@1.0.0 start script.
+npm ERR! This is probably not a problem with npm. There is likely additional logging output above.
+
+npm ERR! A complete log of this run can be found in:
+npm ERR!     /home/albe/.npm/_logs/2019-06-05T11_10_09_660Z-debug.log
+albe@vamp398:/srv/web/mevn-stack-vue-2$
+
+
+
+
+----------------------------------------------------
+

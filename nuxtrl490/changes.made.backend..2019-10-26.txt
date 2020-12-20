@@ -1,0 +1,135 @@
+
+----------------------------------------------------
+Title:  .
+-----------------------2019-10-26[Oct-Sat]15-50PM
+
+---------------------------- config/application.rb ----------------------------
+index b7c42b6..c477f9a 100644
+@@ -13,6 +13,12 @@ Bundler.require(*Rails.groups)
+ module Brail484b53
+   class Application < Rails::Application
+ 
++    config.middleware.insert_before 0, Rack::Cors do
++      allow do
++        origins '*'
++        resource '*', headers: :any, methods: [:get, :post, :options]
++      end
++    end
+     
+     config.time_zone = 'Eastern Time (US & Canada)'
+     
+_____________
+
+
+     
+------------------------------- config/routes.rb -------------------------------
+
+look at final routes. 
+  proper /users/current needed. with show 
+ 
+
+   mount RailsAdmin::Engine => '/radmin', as: 'rails_admin'
+   resources :roles
+-  devise_for :users, controllers: { sessions: 'users/sessions' }
+-  
+-  root "home#index"
++ 
++  devise_for :users, controllers: { sessions: 'users/sessions' } do
++    devise_scope :user do
++      get 'users/current', to: 'sessions#show'
++    end
++  end
++    
++  # root "home#index"
+ 
+ 
+   get 'home/index'
+
+
+_____________
+
+
+
+------------- db/migrate/40170101010105_add_trackable_to_devise.rb -------------
+index 7c834a8..f0a149a 100644
+@@ -4,8 +4,8 @@ class AddTrackableToDevise < ActiveRecord::Migration[5.0]
+
+-    add_column :users, :current_sign_in_ip, :inet
+-    add_column :users, :last_sign_in_ip, :inet
++    add_column :users, :current_sign_in_ip, :string
++    add_column :users, :last_sign_in_ip, :string
+
+
+ 
+_____________
+
+
+
+---------------- app/views/devise/sessions/create.json.jbuilder ----------------
+
+unneeded.
+
+
++json.token @token
+
+----------------- app/views/devise/sessions/show.json.jbuilder -----------------
+new file mode 100644
+index 0000000..e828037
+@@ -0,0 +1,5 @@
+
+needed..
+
+
++if user_signed_in?
++  json.user do
++    json.(current_user, :id, :email)
++  end
++end
+
+------------------------------- config/routes.rb -------------------------------
+index ce7f042..2f0f4ab 100644
+@@ -27,7 +27,8 @@ Rails.application.routes.draw do
+   resources :examples
+   devise_for :users, controllers: { sessions: 'users/sessions' } 
+   devise_scope :user do
+-      get 'users/current', to: 'user2s#show'
++      # get 'users/current', to: 'user2s#show'
++      get 'users/current', to: 'users/sessions#show'
+   end  
+   
+ 
+@@ -49,7 +50,7 @@ Rails.application.routes.draw do
+   mount RailsAdmin::Engine => '/radmin', as: 'rails_admin'
+   resources :roles
+     
+-  # root "home#index"
++  root "home#index"
+ 
+ 
+_____________
+
+
+
+------------------------------- config/routes.rb -------------------------------
+index 2f0f4ab..cdee68c 100644
+@@ -1,13 +1,13 @@
+ Rails.application.routes.draw do
+   
+-  resources :user2s
++  #resources :user2s
+   
+   namespace :api, defaults: {format: :json} do
+     resources :examples , controller: '/examples'
+     devise_for :users, controllers: {sessions: 'users/sessions'}
+-    # devise_scope :user do
+-    #     get 'users/current', to: 'sessions#show'
+-    #   end
++    devise_scope :user do
++        get 'users/current', to: 'users/sessions#show'
++      end
+   end
+
+
+   
+ 
+----------------------------------------------------

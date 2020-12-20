@@ -1,0 +1,41 @@
+0000000000000000000000000000000000000000 688bd0caf7ce4eb2b5537b399c2cc91559501ad0 David Gleba <dgleba@gmail.com> 1603676812 -0400	commit (initial): New, Before any changes. Created using github.com/dgleba/bashrail.
+688bd0caf7ce4eb2b5537b399c2cc91559501ad0 92c137c748f0243bc13c58934da43c711f3d3d6d David Gleba <dgleba@gmail.com> 1603676815 -0400	commit: gemfile
+92c137c748f0243bc13c58934da43c711f3d3d6d 590365c3010d6bea1b113e0d6785bfd63ff3aa81 David Gleba <dgleba@gmail.com> 1603676815 -0400	commit: change application.rb timezone
+590365c3010d6bea1b113e0d6785bfd63ff3aa81 c0f4a53e919ce4fcaae1c9aca25f18dd65291b1d David Gleba <dgleba@gmail.com> 1603676817 -0400	commit: add home page
+c0f4a53e919ce4fcaae1c9aca25f18dd65291b1d 7d4c6c2e74fb44cf75324a8d7082d4729017c731 David Gleba <dgleba@gmail.com> 1603676823 -0400	commit: install 1 - bootstrap1.sh
+7d4c6c2e74fb44cf75324a8d7082d4729017c731 3bbac64c4db59b1173eab1dbb5c2d7703e31ee45 David Gleba <dgleba@gmail.com> 1603676824 -0400	commit: copy and modify scaffold templates - bootstrap1.sh
+3bbac64c4db59b1173eab1dbb5c2d7703e31ee45 93e6ac45cd3db64c62086d71beb8beb8e5d160ce David Gleba <dgleba@gmail.com> 1603676825 -0400	commit: app layout with disabled turbolinks
+93e6ac45cd3db64c62086d71beb8beb8e5d160ce dde473a15d1ae1785a5264bf4d4cb5f87126cafc David Gleba <dgleba@gmail.com> 1603676836 -0400	commit: Kaminari Ransack
+dde473a15d1ae1785a5264bf4d4cb5f87126cafc 610e52c1b6c73f138f95adfc6cd6f25bd8eb1ba9 David Gleba <dgleba@gmail.com> 1603676839 -0400	commit: add devise start
+610e52c1b6c73f138f95adfc6cd6f25bd8eb1ba9 a3a9f1d89c9e0d2bf6a01e23e42b16ede39c9580 David Gleba <dgleba@gmail.com> 1603676840 -0400	commit: add devise 1a
+a3a9f1d89c9e0d2bf6a01e23e42b16ede39c9580 b7446ee1d6e3aeb6c393d8aee2d438f6ddc0900b David Gleba <dgleba@gmail.com> 1603676841 -0400	commit: add devise 1b
+b7446ee1d6e3aeb6c393d8aee2d438f6ddc0900b 23cb66b1ca38227629609529dfaa9d8036e1b934 David Gleba <dgleba@gmail.com> 1603676841 -0400	commit: add devise 1c
+23cb66b1ca38227629609529dfaa9d8036e1b934 6adbc1fc6c6d35e46a61998ef0687a2f44eef48f David Gleba <dgleba@gmail.com> 1603676843 -0400	commit: add devise 1d
+6adbc1fc6c6d35e46a61998ef0687a2f44eef48f 4a9e4d415f265fef66c547584852003686a05a39 David Gleba <dgleba@gmail.com> 1603676845 -0400	commit: add devise 2
+4a9e4d415f265fef66c547584852003686a05a39 41e7bbea1d446f252a825fd196c3e3490636fd7b David Gleba <dgleba@gmail.com> 1603676847 -0400	commit: jwt1
+41e7bbea1d446f252a825fd196c3e3490636fd7b 07e1f389780319d2d04b4dbf747b1d74e507e7f2 David Gleba <dgleba@gmail.com> 1603676850 -0400	commit: jwt token auth2
+07e1f389780319d2d04b4dbf747b1d74e507e7f2 027b0f38fb06b46aa49f7713a55c1e85cc41a969 David Gleba <dgleba@gmail.com> 1603676850 -0400	commit: jwt token auth 3
+027b0f38fb06b46aa49f7713a55c1e85cc41a969 f092445f016858634fe3734887e650302d2891f5 David Gleba <dgleba@gmail.com> 1603676854 -0400	commit: add cancan 1
+f092445f016858634fe3734887e650302d2891f5 19d550e30129454e71d4206b47a5f51bfcfb1235 David Gleba <dgleba@gmail.com> 1603676858 -0400	commit: add cancan 2
+19d550e30129454e71d4206b47a5f51bfcfb1235 e62c4c869336681a00db392b52306074c4955c59 David Gleba <dgleba@gmail.com> 1603676864 -0400	commit: install admin1
+e62c4c869336681a00db392b52306074c4955c59 8859ac115b4ce70c34c96ff4d0d9b1734500263e David Gleba <dgleba@gmail.com> 1603676867 -0400	commit: install admin
+8859ac115b4ce70c34c96ff4d0d9b1734500263e ad5992f0357e5729e620d3fe7e4fefabdcb44459 David Gleba <dgleba@gmail.com> 1603676868 -0400	commit: configure customized admin
+ad5992f0357e5729e620d3fe7e4fefabdcb44459 f820abb2d69b0f83d534d3385073bb1f4a0fd545 David Gleba <dgleba@gmail.com> 1603676873 -0400	commit: gemfile for rails_admin material theme
+f820abb2d69b0f83d534d3385073bb1f4a0fd545 e67f7bbc3fbb08905ad299f37f9320967305f89b David Gleba <dgleba@gmail.com> 1603676875 -0400	commit: ldap - 1 - before rails g devise_ldap_authenticatable:install
+e67f7bbc3fbb08905ad299f37f9320967305f89b 1acb84366e27fdda4bf628a5dcc3c62536e2c883 David Gleba <dgleba@gmail.com> 1603676877 -0400	commit: after rails g devise_ldap_authenticatable:install
+1acb84366e27fdda4bf628a5dcc3c62536e2c883 f8965aefa870e4a02f43e3bfdb73b9d897b1af7e David Gleba <dgleba@gmail.com> 1603676877 -0400	commit: ldap - 3. setup finished. check the ldap_manual-edits.txt file for more instructions
+f8965aefa870e4a02f43e3bfdb73b9d897b1af7e 40ba25937ff3530bcea5bfe9be6f71af7f2d4cff David Gleba <dgleba@gmail.com> 1603676880 -0400	commit: paper_trail - 1
+40ba25937ff3530bcea5bfe9be6f71af7f2d4cff 72530a1b24cbc6133633bd6897734d4d1f28bf09 David Gleba <dgleba@gmail.com> 1603676882 -0400	commit: paper_trail - 2. install and migrate
+72530a1b24cbc6133633bd6897734d4d1f28bf09 374fad929d1708821a2e7954ab7b1a94fd6d9bb1 David Gleba <dgleba@gmail.com> 1603676883 -0400	commit: paper_trail - 3. setup
+374fad929d1708821a2e7954ab7b1a94fd6d9bb1 5cc96af57e119b57a3fb692b2dd4dc53fccd1a77 David Gleba <dgleba@gmail.com> 1603676886 -0400	commit: figaro environment gem
+5cc96af57e119b57a3fb692b2dd4dc53fccd1a77 71d6fce8fdd2b1bcab7e9a6b5673a85a32ba4ce2 David Gleba <dgleba@gmail.com> 1603676886 -0400	commit: after figaro install
+71d6fce8fdd2b1bcab7e9a6b5673a85a32ba4ce2 b349f70941570bbeee49b19ece3be76b15957f86 David Gleba <dgleba@gmail.com> 1603676900 -0400	commit: scaffold
+b349f70941570bbeee49b19ece3be76b15957f86 a0796ada0c63f95ff9f9ee12c4fccb61cfd84088 David Gleba <dgleba@gmail.com> 1603676906 -0400	commit: enable select2
+a0796ada0c63f95ff9f9ee12c4fccb61cfd84088 048b7efa7aec1c0ddd3c30957ef4aded957cc662 David Gleba <dgleba@gmail.com> 1603676914 -0400	commit: jquery-autocomplete-bigtunacan
+048b7efa7aec1c0ddd3c30957ef4aded957cc662 e8bccc03d76988f51761ccc7799830ddc9f5eeba David Gleba <dgleba@gmail.com> 1603676917 -0400	commit: activestorage1
+e8bccc03d76988f51761ccc7799830ddc9f5eeba 46a605634a0312b960b2e33c33d02b477dea636e David Gleba <dgleba@gmail.com> 1603676923 -0400	commit: activestorage gemfile
+46a605634a0312b960b2e33c33d02b477dea636e 4209e8b1ac1d8f3592325a7f57b090e37973dfa5 David Gleba <dgleba@gmail.com> 1603676924 -0400	commit: activestorage app edits
+4209e8b1ac1d8f3592325a7f57b090e37973dfa5 a8759c7d1fe91140c2543a34e213d38ceea22f77 David Gleba <dgleba@gmail.com> 1603676924 -0400	commit: activestorage app edits2
+a8759c7d1fe91140c2543a34e213d38ceea22f77 10827723bc2f9c1e8ee255aaa1afd39f7969dfbd David Gleba <dgleba@gmail.com> 1603676930 -0400	commit: seed
+10827723bc2f9c1e8ee255aaa1afd39f7969dfbd 5d431e1889aad151d0320dad25d7c5cce5853ca8 David Gleba <dgleba@gmail.com> 1603676935 -0400	commit: populate
+5d431e1889aad151d0320dad25d7c5cce5853ca8 4b5be53308eceea0742b69d00bc6050872ec5017 David Gleba <dgleba@gmail.com> 1603676936 -0400	commit: add sqlite db and docs. Bashrail Finished.

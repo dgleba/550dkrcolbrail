@@ -1,0 +1,108 @@
+
+summary
+
+
+----------------------------------------------------
+Title:  .
+-----------------------2019-07-21[Jul-Sun]15-53PM
+
+see krunal stuff. good.
+
+https://github.com/KrunalLathiya/MEVNCRUDExample
+
+https://appdividend.com/2018/11/21/mevn-stack-tutorial-with-example-from-scratch/
+
+
+--
+
+1.
+
+C:\n\sfile\0computersf\0-cm-notes-01\gabby.precious.smashingmagazine.com202010authentication-in-vue-js.txt
+
+
+2.
+
+try?
+https://github.com/bezkoder/vue-vuex-jwt-auth
+	has article link.
+	https://bezkoder.com/jwt-vue-vuex-authentication/
+
+
+3.
+
+see vue rail files.
+	 like 
+	 C:\n\sfile\csdsf\computer\computer-sf3\vue-auth\b465djamware-vueauth\b465djamware-vueauth-source
+
+
+
+----------------------------------------------------
+Title:  .
+-----------------------2019-10-27[Oct-Sun]21-36PM
+
+
+vue auth working..
+
+hooked to rails.
+C:\n\sfile\0computersf\2019\02019cmnotes\nuxtvue\nuxtrl490\README.notes.nuxtrl.railnuxt490.autheg_master.txt
+
+
+too simple.
+C:\n\sfile\csdsf\computer\0computer-sf3\vue-auth\u465u\vue465u.txt
+    C:\n\sfile\csdsf\computer\0computer-sf3\vue-auth\u465u\Vue Authentication And Route Handling Using Vue-router ― Scotch.io.html
+
+
+
+----------------------------------------------------
+
+
+
+----------------------------------------------------
+Title:  .
+-----------------------2019-07-04[Jul-Thu]11-57AM
+
+_____________
+
+2019-07-21
+
+
+Try..
+
+https://github.com/christiannwamba/invoicing-app
+
+
+_____________
+
+
+
+git clone https://github.com/christiannwamba/vuex-auth-jwt 
+sep 18   465r
+
+
+git clone https://github.com/christiannwamba/vue-auth-vuex 
+aug 18
+
+
+git clone https://github.com/christiannwamba/vue-auth-handling 
+jul 18 465u
+
+
+
+
+----------------------------------------------------
+
+
+
+_____________
+
+
+jason watmore
+
+
+backend seems good. Front end is confusing.
+
+https://github.com/cornflourblue/node-jwt-authentication-api
+
+
+
+----------------------------------------------------

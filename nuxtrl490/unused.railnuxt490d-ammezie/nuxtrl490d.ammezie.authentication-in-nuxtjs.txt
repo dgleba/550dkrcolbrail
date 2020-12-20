@@ -1,0 +1,12 @@
+
+https://scotch.io/tutorials/implementing-authentication-in-nuxtjs-app
+https://scotch.io/tutorials/implementing-authentication-in-nuxtjs-app
+
+Chimezie Enyinnaya (@ammezie)July 19, 2018
+
+
+ammezie.authentication-in-nuxtjs
+
+
+albe@pmdsdata7:/srv/file/test/nuxtrl$ git clone https://github.com/ammezie/nuxt-auth-app.git d490ammezienuxtauth
+

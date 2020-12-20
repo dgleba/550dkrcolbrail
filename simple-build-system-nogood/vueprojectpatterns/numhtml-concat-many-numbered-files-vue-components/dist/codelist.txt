@@ -1,0 +1,11 @@
+./00,folder,order,matters.txt
+./10,concat,html,js,vue,components.txt
+./50-top
+./50-top/00,DOESNT-MATTER-file-order.txt
+./50-top/components.js
+./50-top/product.js
+./90-bottom
+./90-bottom/00,file-order,matters.txt
+./90-bottom/80-router.txt
+./90-bottom/90-app.txt
+./90-bottom/_00,file-order,matters.txt

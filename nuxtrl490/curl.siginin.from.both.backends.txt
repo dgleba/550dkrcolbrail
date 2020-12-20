@@ -1,0 +1,89 @@
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+This is response from two different rails backends.
+
+
+Any difference didn't matter to nuxt.
+
+Nuxt needed user info from /users/current as json with id and email.
+
+
+2019-10-25 02:24PM
+
+_____________
+
+
+autheg-backend
+
+
+curl -i -H "Content-Type: application/json" \
+      -X POST -D ./curldump -i\
+      -d '{"user": {"email":"a@a","password":"123123"}}' \
+      http://10.4.1.228:8080/api/users/sign_in
+      
+      
+albe@pmdsdata7:~$ 
+curl -i -H "Content-Type: application/json" \
+>       -X POST -D ./curldump -i\
+>       -d '{"user": {"email":"a@a","password":"123123"}}' \
+>       http://10.4.1.228:8080/api/users/sign_in
+HTTP/1.1 200 OK
+Location: /
+Content-Type: application/json; charset=utf-8
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxIiwic2NwIjoidXNlciIsImF1ZCI6bnVsbCwiaWF0IjoxNTcyMDI3MjY0LCJleHAiOjE1NzIwMzA4NjQsImp0aSI6ImQxOGQxMzk0LTYyM2ItNDYyOS1hNjBjLTliZGRiODM0ODBiMiJ9.OYQaesjm9PQoPbvQd0jeSvJVuzHnAexpZ3-LKJTawjA
+ETag: W/"d3f1132ce2f4735ccac03af65c2a8f48"
+Cache-Control: max-age=0, private, must-revalidate
+X-Request-Id: 04a571cc-7a31-4090-b42a-6835e0192e80
+X-Runtime: 1.258037
+Vary: Origin
+Transfer-Encoding: chunked
+
+{"token":"eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxIiwic2NwIjoidXNlciIsImF1ZCI6bnVsbCwiaWF0IjoxNTcyMDI3MjY0LCJleHAiOjE1NzIwMzA4NjQsImp0aSI6ImQxOGQxMzk0LTYyM2ItNDYyOS1hNjBjLTliZGRiODM0ODBiMiJ9.OYQaesjm9PQoPbvQd0jeSvJVuzHnAexpZ3-LKJTawjA"}
+
+albe@pmdsdata7:~$
+
+
+
+_____________
+
+
+brail484b53
+
+      
+curl -i -H "Content-Type: application/json" \
+      -X POST -D ./curldump -i\
+      -d '{"user": {"email":"a","password":"a"}}' \
+      http://10.4.1.228:3001/users/sign_in.json
+            
+
+
+albe@pmdsdata7:~$ curl -i -H "Content-Type: application/json" \
+>       -X POST -D ./curldump -i\
+>       -d '{"user": {"email":"a","password":"a"}}' \
+>       http://10.4.1.228:3001/users/sign_in.json
+HTTP/1.1 200 OK
+X-Frame-Options: SAMEORIGIN
+X-XSS-Protection: 1; mode=block
+X-Content-Type-Options: nosniff
+X-Download-Options: noopen
+X-Permitted-Cross-Domain-Policies: none
+Referrer-Policy: strict-origin-when-cross-origin
+Content-Type: application/json; charset=utf-8
+ETag: W/"862f54690147f5b530aa5c529b23a727"
+Cache-Control: max-age=0, private, must-revalidate
+Set-Cookie: _brail484b53_session=EevIF1zglMOIH6pzmDXeo%2FMJHGFzv3T3xMVeN98cO4fvuvWoQSYSeBli12BVcSbwOMsc7%2BtHJ5rbG4xIuE3NgPhKUmfRMsj3KshzTPQ7wq4E%2FzonN%2FKY83kZCi7SwvNSnG4M0d9ceA5jBraEofDd74wtcFG0k8UkSnfr3FvFpXlI9cb4YHcc3cb%2BRSSJON6hQ3%2ByWT%2B3B9CDkI2m8o8A%2BUletSa1wUpB--lkd617BJsdEynvLY--4SJKb7EiJXScDyh29dd0aQ%3D%3D; path=/; HttpOnly
+X-Request-Id: 81a5f5d1-73db-4ef6-a3e2-bda36761875f
+X-Runtime: 0.265291
+Vary: Origin
+Transfer-Encoding: chunked
+
+{"user":"a","token":"eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJleHAiOjE1NzIwOTI0Nzl9.BJhxZENuNBPBYmGbTEwHIJRqbSCwhZ4h9QFqxElfC6c"}
+albe@pmdsdata7:~$
+albe@pmdsdata7:~$
+            
+_____________
+            
+            
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+            

@@ -1,0 +1,157 @@
+
+purpose: try vue rails vue system
+
+works.
+
+
+#@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+#@  
+#@  
+#@  
+#@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@   2020-11-15[Nov-Sun]16-43PM 
+
+
+albe@vamp398:/srv/test/brails01/brail542c17-vueyard/brail542c17vue$
+
+
+_____________
+
+
+
+#@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+#@  
+#@  
+#@  
+#@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@   2020-11-15[Nov-Sun]16-46PM 
+
+
+
+https://www.plymouthsoftware.com/articles/rails-with-vue-your-first-component
+
+
+==
+
+// Gemfile
+...
+# Build JSON APIs with ease. Read more: [https://github.com/rails/jbuilder](https://github.com/rails/jbuilder "https://github.com/rails/jbuilder")
+gem 'jbuilder', '~> 2.5'
+# Use webpack to manage app-like JavaScript modules in Rails
+gem 'webpacker', '~> 4.2', '>= 4.2.2'
+# Reduces boot times through caching; required in config/boot.rb
+gem 'bootsnap', '>= 1.1.0', require: false
+
+==
+
+
+https://medium.com/@yuliaoletskaya/how-to-start-your-rails-app-in-a-docker-container-9f9ce29ff6d6
+
+
+RUN apt-get update && apt-get install -y \
+  curl \
+  build-essential \
+  libpq-dev &&\
+  curl -sL https://deb.nodesource.com/setup_10.x | bash - && \
+  curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | apt-key add - && \
+  echo "deb https://dl.yarnpkg.com/debian/ stable main" | tee /etc/apt/sources.list.d/yarn.list && \
+  apt-get update && apt-get install -y nodejs yarn
+  
+  
+==
+
+  
+docker-compose build
+docker-compose run web bundle install
+docker-compose run web yarn install
+docker-compose run web rake db:create
+docker-compose run web rake db:migrate
+docker-compose up
+docker-compose down  
+  
+==
+
+touch yarn.lock
+
+	docker-compose    run --rm  web rails  webpacker:install
+
+	docker-compose exec web yarn install
+
+	docker-compose    run --rm  web rails webpacker:install:vue
+
+	docker-compose exec web yarn install
+	
+	docker-compose exec web bin/webpack
+	docker-compose exec web bin/webpack-dev-server
+
+
+==
+
+ email... a
+web_1       | eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJleHAiOjE2MDU1NDU3MDJ9.QFqvsARFroZhkSr_evEHx7OKWjo-qTfZkGiHh089vGk
+web_1      
+
+curl -i -X GET --header 'Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJleHAiOjE2MDU1NDU3MDh9.JLPCzJXvOUTX3QRNW3WELkj9H_l8aeX74PqJF6ELWQU' 'http://localhost:3001/products.json'
+
+
+==
+
+	docker-compose exec web rails g controller static_pages landing
+
+
+# for vue at config/routes.rb
+Rails.application.routes.draw do
+  root to: 'static_pages#landing' # Add this line
+  get 'static_pages/landing'
+end
+
+
+
+==
+
+<!-- to app/views/layouts/application.html.erb -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>VueTestApp</title>
+    <%= csrf_meta_tags %>
+	
+    <%= csp_meta_tag %>
+    <%= javascript_pack_tag 'hello_vue' %> <%# Add this line %>
+	
+	
+==
+
+
+add to app.vue  - it works.
+
+
+_____________
+
+https://www.plymouthsoftware.com/articles/rails-with-vue-accessing-rails-data
+
+
+dc exec web rails g scaffold film title:string description:text
+
+dc exec web rails db:seeder
+
+
+_____________
+
+
+# CREATE app/views/films/index.json.jbuilder
+json.array! @films, :id, :title, :description
+
+
+_____________
+
+https://www.plymouthsoftware.com/articles/rails-with-vue-accessing-rails-data
+
+instll axios and get the data.
+
+I didn't finish that.
+
+_____________
+
+
+
+_____________
+

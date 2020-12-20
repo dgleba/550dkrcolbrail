@@ -1,0 +1,1 @@
+{"auth":{"user":{"id":2,"email":"a"},"loggedIn":true}}
