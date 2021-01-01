@@ -1,2 +1,38 @@
 works.
 2019-10-28_Mon_12.54-PM
+
+
+
+=================================================
+
+frontend
+
+-login
+-show errors gracefully
+-pouplate select boxes
+-crud
+-search
+
+-settings page with backend address and info like current user and role
+
+backend
+
+-roles
+-limit 100 rows
+-
+
+
+
+=================================================
+
+other vue auth examples.
+
+.	num	tab	Tags	category2	srch-type	search    	Title	comment	Url	Summary	first sort	order	rating	Author	.	url3	url4	url2	Date	VideoTime	DatePublished	Publication	.	.	.	u	c	.	.	.
+			vue.js auth				Tackling Authentication With Vue Using RESTful APIs | CSS-Tricks		https://css-tricks.com/tackling-authentication-with-vue-using-restful-apis/										2020/12/19		18 May 2020 14:34:08	CSS-Tricks								
+			vue.js auth				How to Build an Authentication into a Vue3 Application - DEV	vue3	https://dev.to/adamcowley/how-to-build-an-authentication-into-a-vue3-application-200b										2020/12/19							2020-12-21 17:47:19	2020-12-21 17:47:19			
+			vue.js auth				JscramblerBlog/jscrambler-vueauthclient	cookie	https://github.com/JscramblerBlog/jscrambler-vueauthclient/blob/master/src/components/Login.vue					JscramblerBlog					2020/12/19			GitHub				2020-12-21 17:46:44	2020-12-21 17:46:44			
+			vue.js auth				Handling Authentication In Vue Using Vuex		https://www.digitalocean.com/community/tutorials/handling-authentication-in-vue-using-vuex#prerequisites					Chris Nwamba		https://github.com/christiannwamba/vue-auth-vuex			2020/12/19		21 Sep 2020 14:41:46	DigitalOcean				2020-12-19 22:21:00	2020-12-19 22:21:00			
+			vue.js auth				Dunebook/VueAuthapp	try	https://github.com/Dunebook/VueAuthapp		1	1	9	Dunebook					2020/12/19			GitHub				2020-12-21 17:42:41	2020-12-21 17:42:24			
+			vue.js auth				CodeSandbox	nuxt	https://codesandbox.io/s/github/nuxt/nuxt.js/tree/dev/examples/auth-jwt?from-embed=&file=/README.md										2020/12/19			CodeSandbox				2020-12-21 17:39:42	2020-12-21 17:39:42			
+			vue.js auth				didinj/mevn-stack-vue-2		https://github.com/didinj/mevn-stack-vue-2	good				didinj					2020/12/21			GitHub								
+

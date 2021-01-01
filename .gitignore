@@ -12,6 +12,7 @@
 #----------------------------------------------------------------------------
 
 
+**/strapis/**/db/**
 x/
 
 # add /config/database.yml if it contains passwords
