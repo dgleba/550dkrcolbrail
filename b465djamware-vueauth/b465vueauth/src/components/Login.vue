@@ -55,7 +55,7 @@ export default {
     onSubmit(evt) {
       evt.preventDefault();
       axios
-        .post(`http://10.4.1.228:6036/users/sign_in.json`, { user: {  email: this.username,  password: this.password }
+        .post(`http://192.168.88.60:6035/users/sign_in.json`, { user: {  email: this.username,  password: this.password }
       })
         // .post(`http://10.4.1.228:3000/api/auth/login/`, this.login)
         .then(response => {

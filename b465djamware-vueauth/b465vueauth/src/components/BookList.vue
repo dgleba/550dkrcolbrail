@@ -42,9 +42,11 @@ export default {
   created() {
     this.access_token = localStorage.getItem("jwtToken");
     axios.defaults.headers.common['Authorization'] = `Bearer ${this.access_token}` 
-    
+    axios.defaults.port=6035;
     axios
-      .get(`http://10.4.1.228:6036/products.json`)
+      // .get(`http://${process.env.BACKEND_URL}:${process.env.BACKEND_PORT}/products.json`)
+      // .get(`http://192.168.88.60:6035/products.json`)
+      .get(`${process.env.BACKEND_URL}/products.json`)
       .then(response => {
         this.books = response.data;
       })
