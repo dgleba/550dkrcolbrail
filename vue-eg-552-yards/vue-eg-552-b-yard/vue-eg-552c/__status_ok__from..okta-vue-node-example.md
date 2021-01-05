@@ -18,6 +18,32 @@ Simple vue crud for backend api with auth, etc.
 
 _____________
 
+=================================================
+
+todo:
+
+add toast or something that shows loading status over top of page, not inserted in div.
+
+show current user. login if not logged in and logout if logged in.
+
+error notifications?
+
+add create button. show hidden form on pressing create.
+
+add search feature
+
+add pagination?
+
+refactor naming. use ppost for post table name
+
+add pbook table
+
+add searchable select box of pbook in ppost
+
+
+
+=================================================
+
 
 detail:
 

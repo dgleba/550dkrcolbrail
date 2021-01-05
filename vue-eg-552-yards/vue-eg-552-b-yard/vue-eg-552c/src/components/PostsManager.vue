@@ -2,6 +2,16 @@
   <div class="container-fluid mt-4">
     <h4 class="h4">Posts</h4>
     <b-alert :show="loading" variant="info">Loading...</b-alert>
+
+
+    <b-modal id="loading01" ref="my-modal" hide-footer title="Using Component Methods">
+      <div class="d-block text-center">
+        <h3>Hello From My Modal!</h3>
+      </div>
+      <b-button class="mt-3" variant="outline-danger" block @click="hideModal">Close Me</b-button>
+      <b-button class="mt-2" variant="outline-warning" block @click="toggleModal">Toggle Me</b-button>
+    </b-modal>
+
     <b-row>
       <b-col>
         <table class="table table-striped">
@@ -59,6 +69,9 @@ export default {
   methods: {
     async refreshPosts () {
       this.loading = true
+      // this.$bvModal.show("loading01")
+      // this.$refs['loading01'].show()
+      this.showModal
       this.posts = await api.getPosts()
       this.loading = false
     },
@@ -83,7 +96,13 @@ export default {
         await api.deletePost(id)
         await this.refreshPosts()
       }
-    }
+    },
+      showModal() {
+        this.$refs['loading01'].show()
+      },
+      hideModal() {
+        this.$refs['loading01'].hide()
+      },
   }
 }
 </script>
