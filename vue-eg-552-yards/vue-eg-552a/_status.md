@@ -6,6 +6,8 @@ some works.
 
 booklist has extra columns i don't see where they come from.  2021-01-02_Sat_10.41-AM
 
+copy components,main,app.vue from B465djamware-vueauth
+
 
 
 
