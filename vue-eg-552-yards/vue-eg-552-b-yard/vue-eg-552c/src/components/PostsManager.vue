@@ -1,20 +1,21 @@
 <template>
   <div class="container-fluid mt-4">
     <h4 class="h4">Posts</h4>
-    <b-alert :show="loading" variant="info">Loading...</b-alert>
+    <!-- <b-alert :show="loading" variant="info">Loading...</b-alert> -->
 
-
-    <b-modal id="loading01" ref="my-modal" hide-footer title="Using Component Methods">
+    <!-- <b-modal id="loading01" ref="my-modal" hide-footer title="Using Component Methods">
       <div class="d-block text-center">
         <h3>Hello From My Modal!</h3>
       </div>
       <b-button class="mt-3" variant="outline-danger" block @click="hideModal">Close Me</b-button>
       <b-button class="mt-2" variant="outline-warning" block @click="toggleModal">Toggle Me</b-button>
-    </b-modal>
+    </b-modal> -->
 
     <b-row>
       <b-col>
         <table class="table table-striped">
+        <b-overlay :show="showoverlay" class="d-inline-block" rounded="circle" :variant="info" :opacity="0.77" >
+          <!-- <b-img thumbnail rounded="circle" fluid src="https://picsum.photos/200/200/?image=54" alt="Image 1"></b-img> -->
           <thead>
             <tr>
               <th class="text-center">Action:&nbsp;</th>
@@ -34,6 +35,7 @@
               <td>{{ post.updated_at }}</td>
             </tr>
           </tbody>
+        </b-overlay>
         </table>
       </b-col>
       <b-col lg="3">
@@ -60,7 +62,8 @@ export default {
     return {
       loading: false,
       posts: [],
-      model: {}
+      model: {},
+      show: false
     }
   },
   async created () {
@@ -68,12 +71,11 @@ export default {
   },
   methods: {
     async refreshPosts () {
-      this.loading = true
-      // this.$bvModal.show("loading01")
-      // this.$refs['loading01'].show()
-      this.showModal
+      this.loading = true // for original alert
+      this.showoverlay = true // for overlay
       this.posts = await api.getPosts()
       this.loading = false
+      this.showoverlay = false
     },
     async populatePostToEdit (post) {
       this.model = Object.assign({}, post)
@@ -96,13 +98,7 @@ export default {
         await api.deletePost(id)
         await this.refreshPosts()
       }
-    },
-      showModal() {
-        this.$refs['loading01'].show()
-      },
-      hideModal() {
-        this.$refs['loading01'].hide()
-      },
+    }
   }
 }
 </script>
