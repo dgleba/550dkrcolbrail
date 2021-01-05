@@ -1,45 +1,43 @@
 <template>
   <div class="container-fluid mt-4">
-    <h1 class="h1">Posts Manager</h1>
+    <h4 class="h4">Posts</h4>
     <b-alert :show="loading" variant="info">Loading...</b-alert>
     <b-row>
       <b-col>
         <table class="table table-striped">
           <thead>
             <tr>
+              <th class="text-center">Action:&nbsp;</th>
               <th>ID</th>
               <th>Title</th>
               <th>Updated At</th>
-              <th>&nbsp;</th>
             </tr>
           </thead>
           <tbody>
             <tr v-for="post in posts" :key="post.id">
-              <td>{{ post.id }}</td>
-              <td>{{ post.title }}</td>
-              <td>{{ post.updated_at }}</td>
-              <td class="text-right">
+              <td class="text-center">
                 <a href="#" @click.prevent="populatePostToEdit(post)">Edit</a> -
                 <a href="#" @click.prevent="deletePost(post.id)">Delete</a>
               </td>
+              <td>{{ post.id }}</td>
+              <td>{{ post.title }}</td>
+              <td>{{ post.updated_at }}</td>
             </tr>
           </tbody>
         </table>
       </b-col>
       <b-col lg="3">
-        <b-card :title="(model.id ? 'Edit Post ID#' + model.id : 'New Post')">
+        <div :title="(model.id ? 'Edit ID#' + model.id : 'New') ">
           <form @submit.prevent="savePost">
+            <b-btn type="submit" variant="success">Save</b-btn> 
             <b-form-group label="Title">
               <b-form-input type="text" v-model="model.title"></b-form-input>
             </b-form-group>
             <b-form-group label="Body">
               <b-form-textarea rows="4" v-model="model.body"></b-form-textarea>
             </b-form-group>
-            <div>
-              <b-btn type="submit" variant="success">Save Post</b-btn>
-            </div>
           </form>
-        </b-card>
+        </div>
       </b-col>
     </b-row>
   </div>

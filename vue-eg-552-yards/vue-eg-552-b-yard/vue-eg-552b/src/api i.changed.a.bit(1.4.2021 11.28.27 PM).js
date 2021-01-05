@@ -10,8 +10,7 @@ export default {
 
   async execute (method, resource, data) {
     // inject the accessToken for each request
-    // let accessToken = await Vue.prototype.$auth.getAccessToken()
-    this.accessToken = localStorage.getItem("jwtToken");
+    let accessToken = await Vue.prototype.$auth.getAccessToken()
     return client({
       method,
       url: resource,

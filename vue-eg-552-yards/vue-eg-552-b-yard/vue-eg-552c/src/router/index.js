@@ -7,6 +7,7 @@ import PostsManager from '@/components/PostsManager'
 import Login from "@/components/Login";
 import Register from "@/components/Register";
 
+
 // import Auth from '@okta/okta-vue'
 
 // Vue.use(Auth, {
@@ -26,13 +27,10 @@ let router = new Router({
       name: 'Hello',
       component: Hello
     },
-    {
-      path: '/implicit/callback',
-      component: Auth.handleCallback()
-    },
+
     {
       path: '/posts',
-      name: 'PostsManager',
+      name: 'Posts',
       component: PostsManager,
       meta: {
         requiresAuth: true

@@ -29,6 +29,10 @@ vue create vue-eg552a
  1008  21-01-02 00:04:13 npm i --save bootstrap-vue
  1009  21-01-02 00:05:10 npm i --save axios
 
+npm i --save vue-router
+npm i --save bootstrap-vue
+npm i --save axios
+
 copy components,main,app.vue from B465djamware-vueauth
 
 
