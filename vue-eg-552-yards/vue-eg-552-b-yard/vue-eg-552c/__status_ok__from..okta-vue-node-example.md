@@ -29,7 +29,7 @@ show current user. login if not logged in and logout if logged in.
 
 error notifications?
 
-add create button. show hidden form on pressing create.
+add create button --  show hidden form on pressing create.
 
 remove edit/delete buttons from table. click row to edit. show delete button on form if editing.
 

@@ -14,7 +14,7 @@
     <b-row>
       <b-col>
         <table class="table table-striped">
-        <b-overlay :show="showoverlay" class="d-inline-block" rounded="circle" :variant="info" :opacity="0.77" >
+        <b-overlay :show="showoverlay" class="d-inline-block" rounded="circle" variant="light" opacity="0.77" >
           <!-- <b-img thumbnail rounded="circle" fluid src="https://picsum.photos/200/200/?image=54" alt="Image 1"></b-img> -->
           <thead>
             <tr>
