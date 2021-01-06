@@ -22,14 +22,11 @@ _____________
 
 todo:
 
-add toast or something that shows loading status over top of page, not inserted in div.
-    added https://bootstrap-vue.org/docs/components/overlay
-
-show current user. login if not logged in and logout if logged in.
-
 error notifications?
 
 add create button --  show hidden form on pressing create.
+    idea: git clone -b formReuse --single-branch https://github.com/MaxMonteil/VueTodo.git
+    
 
 remove edit/delete buttons from table. click row to edit. show delete button on form if editing.
 
@@ -43,6 +40,17 @@ add pbook table
 
 add searchable select box of pbook in ppost
 
+
+
+_____________
+
+
+done:
+
+add toast or something that shows loading status over top of page, not inserted in div.
+    added https://bootstrap-vue.org/docs/components/overlay
+
+show current user. login if not logged in and logout if logged in.
 
 
 =================================================

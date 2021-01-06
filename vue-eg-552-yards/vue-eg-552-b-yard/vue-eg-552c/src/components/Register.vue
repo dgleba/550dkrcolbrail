@@ -1,7 +1,15 @@
 <template>
   <b-row class="justify-content-md-center">
     <b-col cols="6">
-      <h2>Please Register</h2>
+      <h1>Please Register</h1>
+
+      <hr/>
+      <hr/>
+      <hr/>
+      <h2>Register is currently not active.</h2>
+      <hr/>
+      <hr/>
+      <hr/>
 
       <ul v-if="t_errors && t_errors.length">
         <li v-for="t_error of t_errors" v-bind:key="t_error">
@@ -33,8 +41,11 @@
             v-model.trim="register.password"
           ></b-form-input>
         </b-form-group>
-        <b-button type="submit" variant="primary">Register</b-button>
-        <b-button type="button" variant="success" @click="$router.go(-1)">Cancel</b-button>
+        <!-- 
+          turned this off for now...
+          <b-button type="submit" variant="primary">Register</b-button>   -->
+        <span>&nbsp;</span> <span>&nbsp;</span> <span>&nbsp;</span>
+        <b-button type="button" class="float-right" variant="success" @click="$router.go(-1)">Cancel</b-button>
       </b-form>
     </b-col>
   </b-row>

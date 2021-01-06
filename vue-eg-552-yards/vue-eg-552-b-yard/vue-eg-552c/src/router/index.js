@@ -36,6 +36,7 @@ let router = new Router({
         requiresAuth: true
       }
     },
+
     {
       path: "/login",
       name: "Login",

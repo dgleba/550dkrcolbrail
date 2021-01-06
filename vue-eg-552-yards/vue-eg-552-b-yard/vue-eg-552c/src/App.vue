@@ -7,10 +7,14 @@
         <b-navbar-nav>
           <b-nav-item to="/">Home</b-nav-item>
           <b-nav-item to="/posts">Posts</b-nav-item>
-          <!-- <b-nav-item to="/login">Login-Explicit</b-nav-item> -->
-          <b-nav-item href="#" @click.prevent="login" v-if="!activeUser">Login</b-nav-item>
-          <b-nav-item href="#" @click.prevent="logout" v-else>Logout</b-nav-item>
         </b-navbar-nav>
+
+           <b-navbar-nav class="ml-auto">
+             <b-nav-item >             [ {{ this.activeUsername }} ] -           </b-nav-item>
+          <b-nav-item href="#" @click.prevent="login" v-if="!activeUser">Login</b-nav-item>
+          <b-nav-item href="#" @click.prevent="logout" v-else>Logout </b-nav-item>
+        </b-navbar-nav>
+
       </b-collapse>
     </b-navbar>
     <!-- routes will be rendered here -->
@@ -23,7 +27,8 @@ export default {
   name: 'app',
   data () {
     return {
-      activeUser: null
+      activeUser: null,
+      jwtusername: null,
     }
   },
   async created () {
@@ -34,15 +39,21 @@ export default {
     '$route': 'refreshActiveUser'
   },
   methods: {
-    login_offline () {
+    login () {
       // this.$auth.loginRedirect()
+      this.$router.push('/Login')
     },
     async refreshActiveUser () {
       // this.activeUser = await this.$auth.getUser()
+      this.activeUser = localStorage.getItem("jwtToken");
+      this.activeUsername = localStorage.getItem("jwtusername");
     },
+
     async logout () {
       // await this.$auth.logout()
       // await this.refreshActiveUser()
+      localStorage.removeItem("jwtToken");
+      localStorage.removeItem("jwtusername");
       this.$router.push('/')
     }
   }

@@ -28,7 +28,8 @@
         >
           <b-form-input type="password" id="password" :state="state" v-model.trim="password"></b-form-input>
         </b-form-group>
-        <b-button type="submit" variant="primary">Login</b-button>
+        <b-button type="submit" variant="primary">Login</b-button> &nbsp;&nbsp; 
+        <br><br><br>
         <b-button type="button" variant="success" @click.stop="register()">Register</b-button>
       </b-form>
     </b-col>
@@ -62,13 +63,14 @@ export default {
         // .post(`http://10.4.1.228:3000/api/auth/login/`, this.login)
         .then(response => {
           localStorage.setItem("jwtToken", response.data.token);
+          localStorage.setItem("jwtusername", response.data.user);
           this.$router.push({
             name: "Posts"
           });
         })
         .catch(e => {
           console.log(e);
-          this.errors.push(e);
+          this.t_errors.push(e);
         });
     },
     register() {

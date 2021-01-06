@@ -1,15 +1,15 @@
 <template>
   <div class="hero">
     <div>
-      <h1 class="display-3">Hello World</h1>
-      <p class="lead">This is the homepage of your vue app</p>
+      <h2 class="display-4">Welcome</h2>
+      <p class="lead">This is the homepage</p>
     </div>
   </div>
 </template>
 
 <style>
   .hero {
-    height: 90vh;
+    height: 50vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -17,6 +17,6 @@
   }
   .hero .lead {
     font-weight: 200;
-    font-size: 1.5rem;
+    font-size: 1.6rem;
   }
 </style>

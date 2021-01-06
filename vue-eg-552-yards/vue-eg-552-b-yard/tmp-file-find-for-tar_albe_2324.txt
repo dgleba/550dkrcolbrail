@@ -1,11 +1,27 @@
+vue-eg-552c/src/server.js
+vue-eg-552c/src/App-orig1.vue
 vue-eg-552c/src/App.vue
+vue-eg-552c/src/api.js
 vue-eg-552c/src/main.js
-vue-eg-552c/src/components/HelloWorld.vue
+vue-eg-552c/src/components/HelloWorld-orig.vue
+vue-eg-552c/src/components/Login.vue
+vue-eg-552c/src/components/PostsManager (1.5.2021 6.10.14 PM).vue
+vue-eg-552c/src/components/Hello.vue
+vue-eg-552c/src/components/PostsManager.vue
+vue-eg-552c/src/components/Register.vue
 vue-eg-552c/src/assets/logo.png
+vue-eg-552c/src/main-orig1.js
+vue-eg-552c/src/router/index (1.4.2021 11.23.40 PM).js
+vue-eg-552c/src/router/index.js
 vue-eg-552c/yarn.lock
 vue-eg-552c/public/favicon.ico
 vue-eg-552c/public/index.html
+vue-eg-552c/package-lock.json
+vue-eg-552c/.env
 vue-eg-552c/package.json
 vue-eg-552c/babel.config.js
 vue-eg-552c/.gitignore
+vue-eg-552c/vue.config.js
+vue-eg-552c/__status_ok__from..okta-vue-node-example.md
+vue-eg-552c/_git (1.5.2021 1.16.17 PM)/git--config (1.3.2021 7.42.51 PM)
 vue-eg-552c/README.md

@@ -1,16 +1,21 @@
 <template>
-  <div class="container-fluid mt-9">
+  <div class="container-fluid mt-4">
     <h4 class="h4">Posts</h4>
     <!-- <b-alert :show="loading" variant="info">Loading...</b-alert> -->
-      <ul v-if="t_errors && t_errors.length">
-        <li v-for="t_error of t_errors" v-bind:key="t_error">
-          <b-alert show>{{t_error.message}}</b-alert>
-        </li>
-      </ul>
+
+    <!-- <b-modal id="loading01" ref="my-modal" hide-footer title="Using Component Methods">
+      <div class="d-block text-center">
+        <h3>Hello From My Modal!</h3>
+      </div>
+      <b-button class="mt-3" variant="outline-danger" block @click="hideModal">Close Me</b-button>
+      <b-button class="mt-2" variant="outline-warning" block @click="toggleModal">Toggle Me</b-button>
+    </b-modal> -->
+
     <b-row>
       <b-col>
-        <b-overlay :show="showoverlay" class="d-inline-block"  variant="info" opacity="0.27" >
         <table class="table table-striped">
+        <b-overlay :show="showoverlay" class="d-inline-block" rounded="circle" variant="light" opacity="0.77" >
+          <!-- <b-img thumbnail rounded="circle" fluid src="https://picsum.photos/200/200/?image=54" alt="Image 1"></b-img> -->
           <thead>
             <tr>
               <th class="text-center">Action:&nbsp;</th>
@@ -22,16 +27,16 @@
           <tbody>
             <tr v-for="post in posts" :key="post.id">
               <td class="text-center">
-                <a href="#" @click.prevent="populatePostToEdit(post)">Edit </a> &nbsp; &nbsp;  <span/>
+                <a href="#" @click.prevent="populatePostToEdit(post)">Edit</a> &nbsp; &nbsp; 
+                <a href="#" @click.prevent="deletePost(post.id)"> - &nbsp; Delete</a>
               </td>
               <td>{{ post.id }}</td>
               <td>{{ post.title }}</td>
               <td>{{ post.updated_at }}</td>
-              <td><a href="#" @click.prevent="deletePost(post.id)"> &nbsp; Delete</a></td>
             </tr>
           </tbody>
-        </table>
         </b-overlay>
+        </table>
       </b-col>
       <b-col lg="3">
         <div :title="(model.id ? 'Edit ID#' + model.id : 'New') ">
@@ -51,24 +56,14 @@
 </template>
 
 <script>
-// import api from '@/api'
-import router from '@/router'
-import axios from 'axios'
-
-  const client = axios.create({
-    baseURL: 'http://192.168.88.60:6035/',
-    json: true
-  });
-
+import api from '@/api'
 export default {
   data () {
     return {
       loading: false,
       posts: [],
       model: {},
-      show: false,
-      access_token:"",
-      t_errors:[]
+      show: false
     }
   },
   async created () {
@@ -78,7 +73,7 @@ export default {
     async refreshPosts () {
       this.loading = true // for original alert
       this.showoverlay = true // for overlay
-      this.posts = await this.getPosts()
+      this.posts = await api.getPosts()
       this.loading = false
       this.showoverlay = false
     },
@@ -87,9 +82,9 @@ export default {
     },
     async savePost () {
       if (this.model.id) {
-        await this.updatePost(this.model.id, this.model)
+        await api.updatePost(this.model.id, this.model)
       } else {
-        await this.createPost(this.model)
+        await api.createPost(this.model)
       }
       this.model = {} // reset form
       await this.refreshPosts()
@@ -100,54 +95,10 @@ export default {
         if (this.model.id === id) {
           this.model = {}
         }
-        await this.dodeletePost(id)
+        await api.deletePost(id)
         await this.refreshPosts()
       }
-    },
-
-    async execute (method, resource, data) {
-      // inject the accessToken for each request
-      // let accessToken = await Vue.prototype.$auth.getAccessToken()
-      this.accessToken = localStorage.getItem("jwtToken");
-      return client({
-        method,
-        url: resource,
-        data,
-        headers: {
-          Authorization: `Bearer ${this.accessToken}`
-        }
-      })
-      .then(req => {
-        return req.data
-      })
-      .catch(e => {
-        console.log("posts 120");
-        console.log(e);
-        this.t_errors.push(e);
-        if (e.response.status === 401) {
-          router.push({
-            name: "Login"
-          });
-        }
-        // return this.t_errors;
-      });
-    },
-    getPosts () {
-      return this.execute('get', '/posts.json')
-    },
-    getPost (id) {
-      return this.execute('get', `/posts/${id}.json`)
-    },
-    createPost (data) {
-      return this.execute('post', '/posts.json', data)
-    },
-    updatePost (id, data) {
-      return this.execute('put', `/posts/${id}.json`, data)
-    },
-    dodeletePost (id) {
-      return this.execute('delete', `/posts/${id}.json`)
     }
-
   }
 }
 </script>
