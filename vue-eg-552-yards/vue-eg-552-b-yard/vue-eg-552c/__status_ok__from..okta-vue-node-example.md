@@ -4,9 +4,8 @@ Status:
 
 I like this as an example app. 2021-01-05
 
-some of it works.
-
-cors error on edit.
+works.
+needs improvements.
 
 _____________
 
@@ -22,24 +21,21 @@ _____________
 
 todo:
 
-error notifications?
+refactor naming. use ppost for post table name
 
-add create button --  show hidden form on pressing create.
-    idea: git clone -b formReuse --single-branch https://github.com/MaxMonteil/VueTodo.git
-    
+add cancel button to form.
 
-remove edit/delete buttons from table. click row to edit. show delete button on form if editing.
+error notifications? May be enough.
 
 add search feature
 
 add pagination?
 
-refactor naming. use ppost for post table name
-
 add pbook table
 
 add searchable select box of pbook in ppost
 
+remove edit/delete buttons from table. click row to edit. show delete button on form if editing.
 
 
 _____________
@@ -52,6 +48,9 @@ add toast or something that shows loading status over top of page, not inserted 
 
 show current user. login if not logged in and logout if logged in.
 
+add create button --  show hidden form on pressing create.
+    idea: git clone -b formReuse --single-branch https://github.com/MaxMonteil/VueTodo.git
+    
 
 =================================================
 
@@ -69,6 +68,13 @@ sftp://192.168.88.60/srv/dkr/550dkrcolbrail/vue-eg-552-yards/brail542c17
 _____________
 
 
+issue:
+
+
+some of it works.
+cors error on edit.
+
+some actions like put were not in cors setup in rails config/application.rb
 
 
 

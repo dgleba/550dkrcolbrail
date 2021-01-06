@@ -1,10 +1,6 @@
 <template>
   <div class="container-fluid mt-9">
-  <div>  
-    Posts
-    <button v-on:click="isHidden = false">Create</button>
-    <!-- <button v-on:click="isHidden = !isHidden">Toggle hide form</button> -->
-  </div>
+    <h4 class="h4">Posts</h4>
     <!-- <b-alert :show="loading" variant="info">Loading...</b-alert> -->
       <ul v-if="t_errors && t_errors.length">
         <li v-for="t_error of t_errors" v-bind:key="t_error">
@@ -37,11 +33,10 @@
         </table>
         </b-overlay>
       </b-col>
-
-      <b-col v-if="!isHidden" lg="3">
+      <b-col lg="3">
         <div :title="(model.id ? 'Edit ID#' + model.id : 'New') ">
           <form @submit.prevent="savePost">
-            <b-btn type="submit" variant="success" >Save</b-btn> 
+            <b-btn type="submit" variant="success">Save</b-btn> 
             <b-form-group label="Title">
               <b-form-input type="text" v-model="model.title"></b-form-input>
             </b-form-group>
@@ -51,7 +46,6 @@
           </form>
         </div>
       </b-col>
-
     </b-row>
   </div>
 </template>
@@ -74,8 +68,7 @@ export default {
       model: {},
       show: false,
       access_token:"",
-      t_errors:[],
-      isHidden: true,
+      t_errors:[]
     }
   },
   async created () {
@@ -99,7 +92,6 @@ export default {
         await this.createPost(this.model)
       }
       this.model = {} // reset form
-      this.isHidden = true
       await this.refreshPosts()
     },
     async deletePost (id) {
@@ -140,8 +132,6 @@ export default {
         // return this.t_errors;
       });
     },
-
-    // backend api urls..
     getPosts () {
       return this.execute('get', '/posts.json')
     },
