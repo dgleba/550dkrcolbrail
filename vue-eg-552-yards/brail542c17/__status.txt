@@ -1,4 +1,21 @@
 
+Status:
+
+ok.
+
+=================================================
+
+Notes:
+
+see. sftp://192.168.88.60/srv/dkr/550dkrcolbrail/vue-eg-552-yards/brail542c17/README.scaffold.md
+
+
+
+
+=================================================
+
+brail:
+
 works.
 
 generated 2020-10-25

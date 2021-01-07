@@ -3,9 +3,14 @@ node_modules
 /dist
 
 
+# dgleba local env files
+.env.*
+
 # local env files
 .env.local
 .env.*.local
+
+
 
 # Log files
 npm-debug.log*

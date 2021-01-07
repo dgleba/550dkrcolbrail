@@ -5,6 +5,7 @@
 Backend api
 
     sftp://192.168.88.60/srv/dkr/550dkrcolbrail/vue-eg-552-yards/brail542c17
+    generated from github.com/dgleba/bashrail.
 
 Front ends
 

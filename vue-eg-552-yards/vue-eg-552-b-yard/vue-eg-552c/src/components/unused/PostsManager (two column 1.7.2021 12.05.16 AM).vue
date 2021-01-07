@@ -1,9 +1,9 @@
 <template>
   <div class="container-fluid mt-9">
   <div>  
-    <span class="mx-2 my-2" >Posts </span>
+    Posts
     <!-- <a href="#" @click.prevent="createPost()">Create </a> -->
-    <button v-if="Post_form_is_hidden"  class="btn btn-primary ml-4 mt-1 mb-1" @click.prevent="createPost()" >Create</button>
+    <button class="btn btn-primary ml-4 mt-1 mb-1" @click.prevent="createPost()" >Create</button>
     <!-- <button v-on:click="Post_form_is_hidden = false">Create</button> -->
     <!-- <button v-on:click="Post_form_is_hidden = !Post_form_is_hidden">Toggle hide form</button> -->
   </div>
@@ -13,25 +13,8 @@
           <b-alert show>{{t_error.message}}</b-alert>
         </li>
       </ul>
-
     <b-row>
-      <b-col v-if="!Post_form_is_hidden" lg="3">
-        <div :title="(model.id ? 'Edit ID#' + model.id : 'New') ">
-          <form @submit.prevent="savePost">
-            <b-btn  class="ml-1" type="submit" variant="success" >Save</b-btn> 
-            <button v-on:click="Post_form_is_hidden = !Post_form_is_hidden" class="btn btn-warning mr-2 float-right" style="color:red;" >Cancel</button>
-            <b-form-group label="Title">
-              <b-form-input type="text" v-model="model.title" required ></b-form-input>
-            </b-form-group>
-            <b-form-group label="Body">
-              <b-form-textarea rows="4" v-model="model.body"></b-form-textarea>
-            </b-form-group>
-          </form>
-        </div>
-      </b-col>
-    </b-row>
-
-    <b-row>
+      <b-col>
         <b-overlay :show="showoverlay" class="d-inline-block"  variant="info" opacity="0.27" >
         <table class="table table-striped">
           <thead>
@@ -55,8 +38,24 @@
           </tbody>
         </table>
         </b-overlay>
-    </b-row>
+      </b-col>
 
+      <b-col v-if="!Post_form_is_hidden" lg="3">
+        <div :title="(model.id ? 'Edit ID#' + model.id : 'New') ">
+          <form @submit.prevent="savePost">
+            <b-btn  class="ml-1" type="submit" variant="success" >Save</b-btn> 
+            <button v-on:click="Post_form_is_hidden = !Post_form_is_hidden" class="btn btn-warning mr-2 float-right" style="color:red;" >Cancel</button>
+            <b-form-group label="Title">
+              <b-form-input type="text" v-model="model.title"></b-form-input>
+            </b-form-group>
+            <b-form-group label="Body">
+              <b-form-textarea rows="4" v-model="model.body"></b-form-textarea>
+            </b-form-group>
+          </form>
+        </div>
+      </b-col>
+
+    </b-row>
   </div>
 </template>
 

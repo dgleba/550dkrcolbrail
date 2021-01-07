@@ -11,7 +11,7 @@
 
       <b-form @submit="onSubmit">
         <b-form-group
-          id="fieldsetHorizontal"
+          id="fieldsetHorizontalu"
           horizontal
           :label-cols="4"
           breakpoint="md"
@@ -20,7 +20,7 @@
           <b-form-input id="username" :state="state" v-model.trim="username"></b-form-input>
         </b-form-group>
         <b-form-group
-          id="fieldsetHorizontal"
+          id="fieldsetHorizontalp"
           horizontal
           :label-cols="4"
           breakpoint="md"

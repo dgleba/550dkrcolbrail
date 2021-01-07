@@ -21,7 +21,10 @@ _____________
 
 todo:
 
-refactor naming. use ppost for post table name
+refactor naming throughout so find/replace can be done to reuse it on another table. eg: find ppost replace with pbook
+    - use ppost for post table name
+    - much more.
+    - may try to use lowercase singular and possibly underscore.
 
 add cancel button to form.
 
@@ -74,7 +77,7 @@ issue:
 some of it works.
 cors error on edit.
 
-some actions like put were not in cors setup in rails config/application.rb
+some actions, like put, were not in cors setup in rails config/application.rb
 
 
 
