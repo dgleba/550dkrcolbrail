@@ -1,18 +1,24 @@
 <template>
   <div class="container-fluid mt-9">
   <div>  
+    <!-- <b-toast id="Post-toaster01">{{}}</b-toast> -->
     <span class="mx-2 my-2" >Posts </span>
+
+    <button v-if="Post_form_is_hidden"  class="btn btn-primary ml-4 mt-1 mb-1" @click="createPost()" >Create</button>
     <!-- <a href="#" @click.prevent="createPost()">Create </a> -->
-    <button v-if="Post_form_is_hidden"  class="btn btn-primary ml-4 mt-1 mb-1" @click.prevent="createPost()" >Create</button>
     <!-- <button v-on:click="Post_form_is_hidden = false">Create</button> -->
     <!-- <button v-on:click="Post_form_is_hidden = !Post_form_is_hidden">Toggle hide form</button> -->
   </div>
+
+    <!-- // error messages area. toast, alert, .. -->
     <!-- <b-alert :show="loading" variant="info">Loading...</b-alert> -->
-      <ul v-if="t_errors && t_errors.length">
-        <li v-for="t_error of t_errors" v-bind:key="t_error">
-          <b-alert show>{{t_error.message}}</b-alert>
-        </li>
-      </ul>
+    <!-- . -->
+    <!-- alert style here. toast style down in script. -->
+      <!-- <div v-if="t_errors && t_errors.length">
+        <div v-for="t_error of t_errors" v-bind:key="t_error">
+          <b-alert dismissible show>{{t_error.message}}</b-alert>
+        </div>
+      </div> -->
 
     <b-row>
       <b-col v-if="!Post_form_is_hidden" lg="3">
@@ -56,7 +62,6 @@
         </table>
         </b-overlay>
     </b-row>
-
   </div>
 </template>
 
@@ -140,9 +145,10 @@ export default {
         return req.data
       })
       .catch(e => {
-        console.log("posts ~133");
+        console.log("posts ~147");
         console.log(e);
         this.t_errors.push(e);
+        this.$bvToast.toast(` ${e}`, {variant: 'danger', autoHideDelay: 15000 });
         if (e.response.status === 401) {
           router.push({
             name: "Login"
