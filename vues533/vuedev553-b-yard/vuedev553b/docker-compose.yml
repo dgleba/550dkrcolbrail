@@ -1,0 +1,19 @@
+version: "3.6"
+
+services:
+
+  #1
+  weba:
+    # dev
+    image: "nginx:1.19-alpine"
+    restart: on-failure
+    # environment:
+    # env_file:
+    #   - ./.env
+    #   - NODE_ENV=production
+    # user: "0:33"
+    # working_dir: /usr/share/nginx/html
+    volumes:
+      - ./weba:/usr/share/nginx/html
+    ports:
+      - "14322:80"

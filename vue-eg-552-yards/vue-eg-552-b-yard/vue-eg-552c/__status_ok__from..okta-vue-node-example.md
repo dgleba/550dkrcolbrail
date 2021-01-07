@@ -26,25 +26,26 @@ refactor naming throughout so find/replace can be done to reuse it on another ta
     - much more.
     - may try to use lowercase singular and possibly underscore.
 
-add cancel button to form.
-
 error notifications? May be enough.
 
 add search feature
-
-add pagination?
 
 add pbook table
 
 add searchable select box of pbook in ppost
 
+
 remove edit/delete buttons from table. click row to edit. show delete button on form if editing.
 
+add pagination?
 
 _____________
 
 
 done:
+
+
+add cancel button to form.
 
 add toast or something that shows loading status over top of page, not inserted in div.
     added https://bootstrap-vue.org/docs/components/overlay

@@ -1,0 +1,49 @@
+albe@vamp398:/srv/test/vues/vuedgdev-1-yard/vuedev1$ dc run --rm vuedev npm init
+Creating network "vuedev1_default" with the default driver
+Pulling vuedev (node:14-slim)...
+14-slim: Pulling from library/node
+e50c3c9ef5a2: Pull complete
+7d035f3b6068: Pull complete
+80121cfd5fe8: Pull complete
+0324d12a5145: Pull complete
+f4df78b50f4a: Pull complete
+Digest: sha256:75fed990b420f202291accb5358836fe4cba6648e7bdbd0cb780e9f0821692e1
+Status: Downloaded newer image for node:14-slim
+This utility will walk you through creating a package.json file.
+It only covers the most common items, and tries to guess sensible defaults.
+
+See `npm help init` for definitive documentation on these fields
+and exactly what they do.
+
+Use `npm install <pkg>` afterwards to install a package and
+save it as a dependency in the package.json file.
+
+Press ^C at any time to quit.
+package name: (app) vueapp
+version: (1.0.0)
+description:
+entry point: (index.js)
+test command:
+git repository:
+keywords:
+author:
+license: (ISC)
+About to write to /app/package.json:
+
+{
+  "name": "vueapp",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
+
+
+Is this OK? (yes)
+albe@vamp398:/srv/test/vues/vuedgdev-1-yard/vuedev1$
+
+
