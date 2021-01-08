@@ -1,4 +1,19 @@
 
+
+=================================================
+
+
+
+Permission:
+
+dc run --rm vuedev bash -c 'chmod -R go+rw /app; chgrp -R 33 /app;'
+
+
+=================================================
+
+These don't work well with docker-compose
+
+
 No need:  dc run --rm vuedev npm init
 
 https://cli.vuejs.org/guide/installation.html
@@ -17,19 +32,39 @@ dc run --rm vuedev vue --version
 
 
 dc run --rm vuedev yarn
+dc run --rm vuedev npm i
 
-dc run --rm vuedev yarn  serve
+dc run --rm vuedev yarn run serve
+dc run --rm vuedev npm run serve
 
-
-
-Permission:
-
-dc run --rm vuedev bash -c 'chmod -R go+rw /app; chgrp -R 33 /app;'
 
 
 =================================================
 
-https://medium.com/@jwdobken/vue-with-docker-initialize-develop-and-build-51fad21ad5e6
+
+was error..
+
+    [2/4] Fetching packages...
+    info fsevents@2.3.1: The platform "linux" is incompatible with this module.
+    info "fsevents@2.3.1" is an optional dependency and failed compatibility check. Excluding it from installation.
+    info fsevents@1.2.13: The platform "linux" is incompatible with this module.
+    info "fsevents@1.2.13" is an optional dependency and failed compatibility check. Excluding it from installation.
+error eslint@6.8.0: The engine "node" is incompatible with this module. Expected version "^8.10.0 || ^10.13.0 || >=11.10.1". Got "11.1.0"
+error Found incompatible module
+    info Visit https://yarnpkg.com/en/docs/cli/install for documentation about this command.
+    ERROR  command failed: yarn
+    albe@pmdsdata7:/srv/file/dg/vue01/myproject02$
+
+
+_____________
+
+
+error:
+error create-strapi-app@3.0.0-beta.18.4: The engine "node" is incompatible with this module. Expected version ">=10.0.0". Got "8.15.0"
+error Found incompatible module.
+
+  mkdir myproject03 && cd "$_" 
+  docker run --rm -v "${PWD}:/$(basename `pwd`)" -w "/$(basename `pwd`)" -it node:14-slim  sh -c "yarn global add @vue/cli && vue create ."
 
 
 =================================================

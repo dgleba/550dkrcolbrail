@@ -1,31 +1,40 @@
+
+
+
+I can't get docker-compose to do this properly. Use docker commands in readme.
+
+
+
 version: "3.6"
 
 services:
 
-  #1
+  # 1
+  # dev
   vuedev:
-    # dev
     # image: "node:14-slim"
     build: 
       context: ./vueapp
       dockerfile: Dockerfile
-    restart: on-failure
+    # restart: on-failure
     # user: "node"
     # environment:
-    env_file:
-      - ./.env
     #   - NODE_ENV=production
+    # env_file:
+    #   - ./.env
     user: "0:33"
     working_dir: /app
     volumes:
       - ./vueapp:/app
-      - /app/node_modules
+      # this seems to prevent changes to permissions in the container to go back to the host.
+      # - /app/node_modules
+      #
       # use package cache to reduce startup time..
       # - ~/sysdata/node_modules/:/tbd
       # - ../sysdata/node_modules/:/tbd
-    # set user to root, group to www-data. All files should be delete-able by www-data group.
-    # problem is that they are read only for group www-data. Use make perm to make them writable.
-    ports:
+      # set user to root, group to www-data. All files should be delete-able by www-data group.
+      # problem is that they are read only for group www-data. Use make perm to make them writable.
+      ports:
       - "14321:8080"
     command: ['npm', 'run', 'serve']
     # networks:
