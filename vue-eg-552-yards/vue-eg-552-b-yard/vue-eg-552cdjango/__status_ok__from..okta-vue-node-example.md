@@ -17,6 +17,19 @@ Simple vue crud for backend api with auth, etc.
 
 _____________
 
+
+
+detail:
+
+front:
+okta-vue-node-example
+sftp://192.168.88.60/srv/dkr/550dkrcolbrail/vue-eg-552-yards/vue-eg-552-b-yard/vue-eg-552cdjango
+
+back:
+
+sftp://192.168.88.60/srv/dkr/532dkrcollection/_533-django-example-yard_role/533-dkrs-djangoexample/mangosite/blogapp/models.py
+
+
 =================================================
 
 todo:
@@ -57,17 +70,6 @@ add create button --  show hidden form on pressing create.
     
 
 =================================================
-
-
-detail:
-
-front:
-okta-vue-node-example
-sftp://192.168.88.60/srv/dkr/550dkrcolbrail/vue-eg-552-yards/vue-eg-552-b-yard/vue-eg-552c
-
-back:
-sftp://192.168.88.60/srv/dkr/550dkrcolbrail/vue-eg-552-yards/brail542c17
-
 
 _____________
 

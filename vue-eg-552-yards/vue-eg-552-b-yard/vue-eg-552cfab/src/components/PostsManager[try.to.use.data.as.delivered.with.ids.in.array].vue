@@ -49,13 +49,13 @@
             </tr>
           </thead>
           <tbody>
-            <tr v-for="post in posts" :key="post.id">
+            <tr v-for="post in posts" :key="post.ids">
               <td class="text-center">
                 <a href="#" @click.prevent="populatePostToEdit(post)">Edit </a> &nbsp; &nbsp;  <span/>
               </td>
-              <td>{{ post.id }}</td>
-              <td>{{ post.title }}</td>
-              <td>{{ post.updated_at }}</td>
+              <!-- <td>{{ post.ids }}</td> -->
+              <td>{{ post.result.title }}</td>
+              <td>{{ post.result.updated_at }}</td>
               <td><a href="#" @click.prevent="deletePost(post.id)"> &nbsp; Delete</a></td>
             </tr>
           </tbody>
@@ -144,7 +144,7 @@ export default {
         }
       })
       .then(req => {
-        // show data returned from the api..
+        // show raw data returned from the api..
         console.log('thisreqdata', req.data)
         // https://www.reddit.com/r/learnjavascript/comments/ku5olt/combine_array_with_json/
         // https://github.com/dpgaspar/Flask-AppBuilder/issues/1543
@@ -154,15 +154,16 @@ export default {
           item.id = req.data.ids[index];
           return item;
         });
-         console.log('reqdata-results', results)
+        console.log('reqdata-results', results)
 
         // 157:64  error  'ids' is not defined  no-undef
         //  161:35  error  Parsing error: Binding member expression
         // I am not sure how to use this.
-        let results2=req.data.result.map((result,index)=>{result.id=req.data.ids[index];return result;});   
-        console.log('reqdata-results2', results2)
+        // let results2=req.data.result.map((result,index)=>{result.id=req.data.ids[index];return result;});   
+        // console.log('reqdata-results2', results2)
 
-        return results
+        // return results
+        return req.data
       })
       .catch(e => {
         console.log("posts ~147");

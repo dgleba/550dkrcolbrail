@@ -1,8 +1,11 @@
 {
-  "name": "vue-eg-552c",
+  "name": "vue-eg-552c-Dj",
   "version": "0.1.0",
   "private": true,
   "scripts": {
+    // dgleba dev
+    "dev": "bash sh-dev.sh",
+
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint"
