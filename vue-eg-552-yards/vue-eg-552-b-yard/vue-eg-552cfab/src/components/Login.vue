@@ -57,8 +57,13 @@ export default {
     // .
     onSubmit(evt) {
       evt.preventDefault();
+      //
+      // I had path wrong and got cors error.
+      // I had missing : colon after password and got 404.
+      // it has to be just right to work.
+      //
       axios
-        .post(`${process.env.VUE_APP_BACKEND_URL}/security/login`, {
+        .post(`${process.env.VUE_APP_BACKEND_URL}/api/v1/security/login`, {
           "password": this.password,
           "provider": "db",
           "refresh": true,

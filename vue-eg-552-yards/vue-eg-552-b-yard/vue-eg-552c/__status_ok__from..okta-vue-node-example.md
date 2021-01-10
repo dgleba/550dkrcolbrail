@@ -17,6 +17,11 @@ Simple vue crud for backend api with auth, etc.
 
 _____________
 
+how to run:
+
+
+
+
 =================================================
 
 todo:

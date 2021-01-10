@@ -72,7 +72,7 @@ import axios from 'axios'
 
   // baseURL: 'http://192.168.88.60:6035/',
   const client = axios.create({
-    baseURL: `${process.env.VUE_APP_BACKEND_URL}/`,
+    baseURL: `${process.env.VUE_APP_BACKEND_URL}`,
     json: true
   });
 
@@ -142,7 +142,7 @@ export default {
         }
       })
       .then(req => {
-        return req.data
+        return req.data.result
       })
       .catch(e => {
         console.log("posts ~147");
@@ -159,19 +159,19 @@ export default {
 
     // backend api urls..
     getPosts () {
-      return this.execute('get', '/posts.json')
+      return this.execute('get', '/api/v1/posts/')
     },
     getPost (id) {
-      return this.execute('get', `/posts/${id}.json`)
+      return this.execute('get', `/api/v1/posts/${id}`)
     },
     apiCreatePost (data) {
-      return this.execute('post', '/posts.json', data)
+      return this.execute('post', '/api/v1/posts/', data)
     },
     updatePost (id, data) {
-      return this.execute('put', `/posts/${id}.json`, data)
+      return this.execute('put', `/api/v1/posts/${id}`, data)
     },
     dodeletePost (id) {
-      return this.execute('delete', `/posts/${id}.json`)
+      return this.execute('delete', `/api/v1/posts/${id}`)
     }
     // end backend api urls..
 

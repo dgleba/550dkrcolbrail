@@ -1,0 +1,254 @@
+
+
+#@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+#@  
+#@  
+#@  
+#@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@   2021-01-09[Jan-Sat]20-23PM 
+
+
+
+works.
+curl -X POST "http://192.168.88.93:14224/api/v1/security/login" -H  "accept: application/json" -H  "Content-Type: application/json" -d "{\"password\":\"a\",\"provider\":\"db\",\"refresh\":true,\"username\":\"a\"}"
+
+
+works.
+curl -X POST "http://192.168.88.93:14224/api/v1/security/login" -H  "accept: application/json" -H  "Content-Type: application/json" -d '{"password":"a","provider":"db","refresh":true,"username":"a"}'
+
+
+works:
+
+      axios
+        .post(`${process.env.VUE_APP_BACKEND_URL}/api/v1/security/login`, {
+          "password": this.password,
+          "provider": "db",
+          "refresh": true,
+          "username": this.username
+          })
+		  
+		  
+_____________
+
+
+http://192.168.88.93:14224/swagger/v1
+
+_____________
+
+
+root@SICS-GZPJL13 /cygdrive/c/n/sfile/knowtes/serve/vamp206a
+$ curl -X POST "http://192.168.88.93:14224/api/v1/security/login" -H  "accept: application/json" -H  "Content-Type: application/json" -d "{\"password\":\"a\",\"provider\":\"db\",\"refresh\":true,\"username\":\"a\"}"
+{"access_token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2MTAyMzM0MDgsIm5iZiI6MTYxMDIzMzQwOCwianRpIjoiOTQwZjc2YTktNDQ3OC00NzQ0LWFhYjMtMTk3ZWZlZWI1ZGY5Ii
+wiZXhwIjoxNjEwMjM0MzA4LCJpZGVudGl0eSI6MSwiZnJlc2giOnRydWUsInR5cGUiOiJhY2Nlc3MifQ.l4EKmHKlh5dJQFeqSX4Ew8oSKACRryrZKBMWQblYdRE","refresh_token":"eyJ0eXAiOiJKV1QiL
+CJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2MTAyMzM0MDgsIm5iZiI6MTYxMDIzMzQwOCwianRpIjoiNjQ4MzJiNjQtNmFiZS00YjZkLTgwODAtYWZhN2Q0NzViN2Y5IiwiZXhwIjoxNjEyODI1NDA4LCJpZGVudGl0
+eSI6MSwidHlwZSI6InJlZnJlc2gifQ.KyCN8sBvFL6wQs8wEPv2v5GRal66edpZn3oOIW5UEKA"}
+
+root@SICS-GZPJL13 /cygdrive/c/n/sfile/knowtes/serve/vamp206a
+$ curl -X POST "http://192.168.88.93:14224/api/v1/security/login" -H  "accept: application/json" -H  "Content-Type: application/json" -d "{"password":"a","provider":"db","refresh":true,"username":"a"}"
+{"message":"400 Bad Request: The browser (or proxy) sent a request that this server could not understand."}
+
+root@SICS-GZPJL13 /cygdrive/c/n/sfile/knowtes/serve/vamp206a
+$
+
+
+
+_____________
+
+I get `has been blocked by CORS policy: Response to preflight request doesn't pass access control check: It does not have HTTP ok status.` from my vue app.
+
+I added flask-cors, and in `__init__.py` I added lines like the following.
+
+```
+from flask_cors import CORS
+app = Flask(__name__)
+CORS(app)
+```
+
+I get a message in the flask console.
+```
+flaskdev_1  | 2021-01-09 20:31:18,369:INFO:werkzeug:192.168.88.54 - - [09/Jan/2021 20:31:18] "OPTIONS /security/login HTTP/1.1" 404 -
+```
+
+I looked for documents or pages that might indicate the correct way to implement this for Flask-AppBuilder. I didn't find much.
+
+Can someone help indicate how I might resolve this?
+
+_____________
+
+
+https://stackoverflow.com/questions/57136748/flask-cors-is-registered-but-still-getting-cors-error
+
+Looks like an issue with trailing backslash. Your routes.py defines the route as '/sets' however the frontend is calling '/sets/'.
+
+Change the routes.py to this and it should work -
+
+from flask import request, jsonify, current_app from . import app, db from .models import SetAnon
+
+@app.route('/sets/', methods=['POST']) # Added trailing backslash
+
+=================================================
+
+
+axios error  Parsing error: Expecting Unicode escape sequence \uXXXX
+
+
+
+=================================================
+
+
+
+#@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+#@  
+#@  process json
+#@  
+#@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@   2021-01-09[Jan-Sat]20-23PM 
+
+{
+  "count": 2,
+  "description_columns": {},
+  "ids": [
+    3,
+    4
+  ],
+  "label_columns": {
+    "active_status": "Active Status",
+    "body": "Body",
+    "created_at": "Created At",
+    "title": "Title",
+    "updated_at": "Updated At"
+  },
+  "list_columns": [
+    "title",
+    "body",
+    "active_status",
+    "created_at",
+    "updated_at"
+  ],
+  "list_title": "List Post",
+  "order_columns": [
+    "title",
+    "body",
+    "active_status",
+    "created_at",
+    "updated_at"
+  ],
+  "result": [
+    {
+      "active_status": null,
+      "body": "eee",
+      "created_at": "2021-01-10T01:09:05",
+      "title": "www",
+      "updated_at": null
+    },
+    {
+      "active_status": null,
+      "body": "44",
+      "created_at": "2021-01-10T01:09:51",
+      "title": "33",
+      "updated_at": null
+    }
+  ]
+}
+
+https://stackoverflow.com/questions/48062821/axios-how-to-read-json-response
+
+https://stackoverflow.com/questions/60548765/retrieving-json-data-from-an-axios-response
+
+
+
+=================================================
+
+The Flask-AppBuilder json API returns data like the following.
+
+I am used to having the `id` in each record of the result.
+
+How can I merge the ids into the result?
+
+```
+{
+  "count": 2,
+  "description_columns": {},
+  "ids": [
+    3,
+    4
+  ],
+	...
+	...
+  "result": [
+    {
+      "active_status": null,
+      "body": "eee",
+      "created_at": "2021-01-10T01:09:05",
+      "title": "www"
+    },
+    {
+      "active_status": null,
+      "body": "44",
+      "created_at": "2021-01-10T01:09:51",
+      "title": "33"
+    }
+  ]
+}
+```
+
+
+https://stackoverflow.com/questions/52038754/javascript-add-an-id-for-each-object-object-json
+
+javascript add new data key to json object from an array of values
+
+
+=================================================
+
+
+https://flask-appbuilder.readthedocs.io/en/latest/rest_api.html#model-rest-api
+
+
+class PostModelApi(ModelRestApi):
+    resource_name = "posts"
+    datamodel = SQLAInterface(Post)
+    allow_browser_login = True
+    show_columns = ['id','title', 'body', 'created_at', 'updated_at']
+
+
+
+(columns:!(id,title),keys:!(none))
+
+http://192.168.88.93:14224/swagger/v1
+
+curl -X POST "http://192.168.88.93:14224/api/v1/security/login" -H  "accept: application/json" -H  "Content-Type: application/json" -d "{\"password\":\"a\",\"provider\":\"db\",\"refresh\":true,\"username\":\"a\"}"
+
+{"access_token":
+token="eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2MTAyOTg3OTMsIm5iZiI6MTYxMDI5ODc5MywianRpIjoiMzgzOGI4MDMtOWE1NS00ZTQyLTkxNWQtOTczNzM4NjNmY2U2IiwiZXhwIjoxNjEwMjk5NjkzLCJpZGVudGl0eSI6MSwiZnJlc2giOnRydWUsInR5cGUiOiJhY2Nlc3MifQ.aRJWMR1itWPpAVJ1j1AWcx9f2fQZ--rxRihxkyj9rVE"
+
+
+
+curl -X GET "http://192.168.88.93:14224/api/v1/posts/?q=(columns:!(id,title),keys:!(none))" -H  "accept: application/json" -H "Authorization: Bearer $token"
+
+
+I have been looking through the docs and googling.
+
+Below, the `ids` are an array seperate from the `result` json object.
+
+albe@vamp398:/srv/dkr/532dkrcollection/549-flasks/549-a-flask-appbuilder-yard/549a-fab$ 
+curl -X GET "http://192.168.88.93:14224/api/v1/posts/?q=(columns:!(id,title),keys:!(none))" -H  "accept: application/json" -H "Authorization: Bearer $token"
+{"count":3,"ids":[3,4],"result":[{"title":"www"},{"title":"33"}]}
+
+I am looking for a way to get the ids within the result json, something like the following.
+
+"result":[{"id":3, title":"www"},{"id":4, title":"33"}]
+
+Can someone help suggest a way this can be done?
+
+
+curl -X GET "http://192.168.88.93:14224/api/v1/posts/?q=(keys:!(none))" -H  "accept: application/json" -H "Authorization: Bearer $token"
+
+
+{
+  "access_token": 
+  token="eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2MTAyNTE4NTcsIm5iZiI6MTYxMDI1MTg1NywianRpIjoiMWUzYjQwYTItYjY2My00ZWM4LTk3MjgtMmY1ZmYyY2YxNDIyIiwiZXhwIjoxNjEwMjUyNzU3LCJpZGVudGl0eSI6MSwiZnJlc2giOnRydWUsInR5cGUiOiJhY2Nlc3MifQ.D7zTFZ4FMO85Knk_9T1N5WJKCUcjOW3JgE5jXsNlu8w"
+  ,
+  "refresh_token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2MTAyNTE4NTcsIm5iZiI6MTYxMDI1MTg1NywianRpIjoiNTE2NjdiNzMtYjA3Yy00YTU0LTg4NWQtMGFmYWY3YjViZWUzIiwiZXhwIjoxNjEyODQzODU3LCJpZGVudGl0eSI6MSwidHlwZSI6InJlZnJlc2gifQ.EX1U0ODGrdDCDFoFHIhpww3biDzhClt01dChK4LRD4I"
+}
+
+
+
+=================================================
