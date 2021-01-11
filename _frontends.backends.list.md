@@ -36,7 +36,10 @@ Front ends
 
 backend
 
-    sftp://192.168.88.60/srv/dkr/532dkrcollection/_533-django-example-yard_role
+        2021-01-11 moved to  sftp://192.168.88.60/srv/dkr/550dkrcolbrail/vue-eg-552-yards/533-django-example-yard_role
+        -
+        was:
+        sftp://192.168.88.60/srv/dkr/532dkrcollection/_533-django-example-yard_role
         origin  https://github.com/dgleba/532dkrcollection.git (fetch)
         albe@vamp398:/srv/dkr/532dkrcollection$ git lds
         d090fe3\ 2021-01-10 (HEAD -> master, origin/master)\ 2021-01-10a\ [David Gleba]
@@ -54,7 +57,8 @@ frontend
 
 backend
 
-    sftp://192.168.88.60/srv/dkr/532dkrcollection/549-flasks/549-a-flask-appbuilder-yard
+    2021-01-11 moved to - sftp://192.168.88.60/srv/dkr/550dkrcolbrail/vue-eg-552-yards/549-flasks
+    was: sftp://192.168.88.60/srv/dkr/532dkrcollection/549-flasks/549-a-flask-appbuilder-yards
 
 
 frontend
