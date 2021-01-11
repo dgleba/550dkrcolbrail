@@ -1,0 +1,164 @@
+
+
+
+https://www.reddit.com/r/learnjavascript/comments/ku5olt/combine_array_with_json/?utm_source=share&utm_medium=web2x&context=3
+
+
+
+Subreddit Icon
+r/learnjavascript
+•Posted by u/dgleba-997
+19 hours ago
+
+
+Combine array with json
+The Flask-AppBuilder json API returns data like the following.
+
+I am used to having the id in each record of the result.
+
+How can I merge the ids into the result?
+
+{
+  "count": 2,
+  "description_columns": {},
+  "ids": [
+    3,
+    4
+  ],
+	...
+	...
+  "result": [
+    {
+      "active_status": null,
+      "body": "eee",
+      "created_at": "2021-01-10T01:09:05",
+      "title": "www"
+    },
+    {
+      "active_status": null,
+      "body": "44",
+      "created_at": "2021-01-10T01:09:51",
+      "title": "33"
+    }
+  ]
+}
+4 Comments
+
+Share
+
+Edit Post
+
+Unsave
+
+Hide
+
+100% Upvoted
+Comment as dgleba-997
+
+Comment
+
+
+
+
+
+
+
+
+
+
+
+Markdown Mode
+SORT BY
+
+BEST
+
+
+level 1
+OldManWithAQuill
+2 points
+·
+18 hours ago
+const response = {
+  "count": 2,
+    "description_columns": { },
+  "ids": [
+    3,
+    4
+  ],
+  "result": [
+    {
+      "active_status": null,
+      "body": "eee",
+      "created_at": "2021-01-10T01:09:05",
+      "title": "www"
+    },
+    {
+      "active_status": null,
+      "body": "44",
+      "created_at": "2021-01-10T01:09:51",
+      "title": "33"
+    }
+  ]
+};
+If you want a new array of objects, which would include an id property for each object, you can do this:
+
+const results = response.result.map((item, index) => {
+  item.id = response.ids[index];
+  return item;
+});
+If you want to just add an id property to each of the objects inside the "result" array, then you can do this:
+
+response.result.forEach((item, index) => {
+  item.id = response.ids[index];
+});
+Reply
+Give Award
+Share
+Report
+Unsave
+
+
+level 2
+dgleba-997
+1 point
+·
+2 hours ago
+Thanks. Very helpful.
+
+Reply
+Share
+Save
+Edit
+
+
+
+level 1
+rick-K732
+1 point
+·
+18 hours ago
+results=results.map((result,index)=>{result.id=ids[index];return result;});
+
+Reply
+Give Award
+Share
+Report
+Save
+
+
+level 2
+dgleba-997
+1 point
+·
+1 hour ago
+Thanks, This works.
+
+I did:
+
+let results2=req.data.result.map((result,index)=>{result.id=req.data.ids[index];return result;});   
+console.log('reqdata-results2', results2)
+
+Reply
+Share
+Save
+Edit

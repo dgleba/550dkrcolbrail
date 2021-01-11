@@ -72,7 +72,7 @@ import axios from 'axios'
 
   // baseURL: 'http://192.168.88.60:6035/',
   const client = axios.create({
-    baseURL: `${process.env.VUE_APP_BACKEND_URL}/`,
+    baseURL: `${process.env.VUE_APP_BACKEND_URL}`,
     json: true
   });
 
@@ -81,7 +81,7 @@ export default {
     return {
       loading: false,
       posts: [],
-      result: [],
+      results: [],
       model: {},
       show: false,
       access_token:"",
@@ -106,6 +106,8 @@ export default {
     },
     async savePost () {
       if (this.model.id) {
+        //debug..
+        console.log('modeltosave', this.model)
         await this.updatePost(this.model.id, this.model)
       } else {
         await this.apiCreatePost(this.model)
@@ -146,12 +148,30 @@ export default {
         // show raw data returned from the api..
         // if last arg is '' empty then it's all one string. if two spaces then indented two spaces.
         console.log ('executereqdata', JSON.stringify(req.data, null, '' ) )
-        // our post data is in result within the data
-        return req.data.result
+        // https://www.reddit.com/r/learnjavascript/comments/ku5olt/combine_array_with_json/
+        // https://github.com/dpgaspar/Flask-AppBuilder/issues/1543
+        //
+        // map id from array ids into json object called result      
+        // If getting, then map id's if other methods then don't
+        if (method === 'get') {
+        const results = req.data.result.map ( (item, index) => {
+          item.id = req.data.ids[index];
+          return item;
+        });
+        console.log ('reqdata-results', results)
+        return results
+        }
+        else {
+          return req.data
+        }
+        // second way of doing this..
+        // let results2=req.data.result.map((result,index)=>{result.id=req.data.ids[index];return result;});   
+        // console.log('reqdata-results2', results2)
+
       })
       .catch(e => {
-        console.log("posts ~147");
-        console.log(e);
+        console.log("posts ~147", e);
+        // console.log(e);
         this.t_errors.push(e);
         this.$bvToast.toast(` ${e}`, {variant: 'danger', autoHideDelay: 15000 });
         if (e.response.status === 401) {
@@ -161,24 +181,6 @@ export default {
         }
       });
     },
-
-    // // backend api urls..
-    // getPosts () {
-    //   return this.execute('get', '/posts.json')
-    // },
-    // getPost (id) {
-    //   return this.execute('get', `/posts/${id}.json`)
-    // },
-    // apiCreatePost (data) {
-    //   return this.execute('post', '/posts.json', data)
-    // },
-    // updatePost (id, data) {
-    //   return this.execute('put', `/posts/${id}.json`, data)
-    // },
-    // dodeletePost (id) {
-    //   return this.execute('delete', `/posts/${id}.json`)
-    // }
-    // // end backend api urls..
 
     // backend api urls..
     getPosts () {
