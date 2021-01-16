@@ -150,8 +150,8 @@ export default {
         return req.data.result
       })
       .catch(e => {
-        console.log("posts ~147");
-        console.log(e);
+        console.log("posts ~153", e);
+        // console.log(e);
         this.t_errors.push(e);
         this.$bvToast.toast(` ${e}`, {variant: 'danger', autoHideDelay: 15000 });
         if (e.response.status === 401) {
@@ -161,24 +161,6 @@ export default {
         }
       });
     },
-
-    // // backend api urls..
-    // getPosts () {
-    //   return this.execute('get', '/posts.json')
-    // },
-    // getPost (id) {
-    //   return this.execute('get', `/posts/${id}.json`)
-    // },
-    // apiCreatePost (data) {
-    //   return this.execute('post', '/posts.json', data)
-    // },
-    // updatePost (id, data) {
-    //   return this.execute('put', `/posts/${id}.json`, data)
-    // },
-    // dodeletePost (id) {
-    //   return this.execute('delete', `/posts/${id}.json`)
-    // }
-    // // end backend api urls..
 
     // backend api urls..
     getPosts () {

@@ -1,0 +1,9 @@
+
+2021-01-16
+
+
+https://github.com/dgleba/532dkrcollection/tree/master/_533e-django-example-yard
+
+
+this is a historical copy that was used with vue here.
+
