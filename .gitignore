@@ -14,6 +14,8 @@
 **/node_modules/**
 **/strapis/**/db/**
 x/
+zip/
+
 
 # add /config/database.yml if it contains passwords
 /config/ldap.yml

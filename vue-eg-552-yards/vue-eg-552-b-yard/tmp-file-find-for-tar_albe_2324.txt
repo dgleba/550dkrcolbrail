@@ -1,33 +1,35 @@
-vue-eg-552c/src/server.js
-vue-eg-552c/src/App.vue
-vue-eg-552c/src/api.js
-vue-eg-552c/src/main.js
-vue-eg-552c/src/components/Login.vue
-vue-eg-552c/src/components/Hello.vue
-vue-eg-552c/src/components/unused/PostsManager (two column 1.7.2021 12.05.16 AM).vue
-vue-eg-552c/src/components/unused/HelloWorld-orig.vue
-vue-eg-552c/src/components/unused/PostsManager (1.5.2021 6.10.14 PM).vue
-vue-eg-552c/src/components/unused/PostsManager (1.5.2021 11.02.05 PM).vue
-vue-eg-552c/src/components/PostsManager.vue
-vue-eg-552c/src/components/Register.vue
-vue-eg-552c/src/assets/logo.png
-vue-eg-552c/src/router/index.js
-vue-eg-552c/src/router/unused/index (1.4.2021 11.23.40 PM).js
-vue-eg-552c/src/unused/App-orig1.vue
-vue-eg-552c/src/unused/api (1.5.2021 8.26.45 PM).js
-vue-eg-552c/src/unused/main-orig1.js
-vue-eg-552c/yarn.lock
-vue-eg-552c/public/favicon.ico
-vue-eg-552c/public/index.html
-vue-eg-552c/package-lock.json
-vue-eg-552c/.env
-vue-eg-552c/_scratchpad.txt
-vue-eg-552c/package.json
-vue-eg-552c/_troubleshooting.md
-vue-eg-552c/babel.config.js
-vue-eg-552c/example.env
-vue-eg-552c/.gitignore
-vue-eg-552c/vue.config.js
-vue-eg-552c/__status_ok__from..okta-vue-node-example.md
-vue-eg-552c/_git (1.5.2021 1.16.17 PM)/git--config (1.3.2021 7.42.51 PM)
-vue-eg-552c/README.md
+vue-eg-552cdjango/src/server.js
+vue-eg-552cdjango/src/App.vue
+vue-eg-552cdjango/src/api.js
+vue-eg-552cdjango/src/main.js
+vue-eg-552cdjango/src/components/Login.vue
+vue-eg-552cdjango/src/components/Hello.vue
+vue-eg-552cdjango/src/components/unused/PostsManager (two column 1.7.2021 12.05.16 AM).vue
+vue-eg-552cdjango/src/components/unused/HelloWorld-orig.vue
+vue-eg-552cdjango/src/components/unused/PostsManager (1.5.2021 6.10.14 PM).vue
+vue-eg-552cdjango/src/components/unused/PostsManager (1.5.2021 11.02.05 PM).vue
+vue-eg-552cdjango/src/components/PostsManager.vue
+vue-eg-552cdjango/src/components/Register.vue
+vue-eg-552cdjango/src/assets/logo.png
+vue-eg-552cdjango/src/router/index.js
+vue-eg-552cdjango/src/router/unused/index (1.4.2021 11.23.40 PM).js
+vue-eg-552cdjango/src/unused/App-orig1.vue
+vue-eg-552cdjango/src/unused/api (1.5.2021 8.26.45 PM).js
+vue-eg-552cdjango/src/unused/main-orig1.js
+vue-eg-552cdjango/yarn.lock
+vue-eg-552cdjango/public/favicon.ico
+vue-eg-552cdjango/public/index.html
+vue-eg-552cdjango/yarn-error.log
+vue-eg-552cdjango/package-lock.json
+vue-eg-552cdjango/.env
+vue-eg-552cdjango/package.json
+vue-eg-552cdjango/babel.config.js
+vue-eg-552cdjango/sh-dev.sh
+vue-eg-552cdjango/example.env
+vue-eg-552cdjango/.gitignore
+vue-eg-552cdjango/vue.config.js
+vue-eg-552cdjango/unused/_scratchpad.txt
+vue-eg-552cdjango/unused/_troubleshooting.md
+vue-eg-552cdjango/unused/__status_ok__from..okta-vue-node-example.md
+vue-eg-552cdjango/_git (1.5.2021 1.16.17 PM)/git--config (1.3.2021 7.42.51 PM)
+vue-eg-552cdjango/README.md

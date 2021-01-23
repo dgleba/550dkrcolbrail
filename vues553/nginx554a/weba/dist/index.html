@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - Filter  table menu Vue.js </title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<div id="app">
+
+  <h2>PMAData Server Apps</h2>
+  
+  <input type="text" placeholder="Type here to search" v-model="filter" />
+
+  <table>
+    <thead>
+      <tr>
+        <th>Application</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr v-for="(row, index) in filteredRows" :key="`${index}`" style="color:black; ">
+        <td  > 
+          <button style="padding 22px;"> 
+            <a v-bind:href="row.tlink" target="blank" style="color:green; " >{{row.application}}</a></button></td>           
+        <td v-html="highlightMatches(row.mdescription)"></td>
+
+        <!-- <td> <a href={{row.tlink}}>{{row.application}}</a> </td> -->
+        <!-- <td> <button onclick="{{row.tlink}}">{{row.tlink}}</button> </td> -->
+        <!--  <td v-html="highlightMatches([...row.employees].sort().join(', '))"></td> -->
+      </tr>
+    </tbody>
+  </table>
+
+</div>
+
+<!-- partial -->
+<script src='https://cdn.jsdelivr.net/npm/vue@2.6.11/dist/vue.js'></script><script  src="./script.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,341 @@
+
+#@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+#@  
+#@  summary
+#@  
+#@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@   2021-01-22[Jan-Fri]18-45PM 
+
+
+works.
+
+after fixing error with comma. see below.
+
+
+
+=================================================
+
+cd /srv/test/jhipstr
+ mkdir nhipster32
+ cd nhipster32
+ nvm which current
+ npm upgrade -g generator-jhipster-nodejs yo generator-jhipster
+
+albe@vamp398:/srv/test/jhipstr/nhipster32$ npm list -g --depth=0
+/home/albe/.nvm/versions/node/v14.15.1/lib
+├── @vue/cli@4.5.9
+├── generator-jhipster@6.10.5
+├── generator-jhipster-nodejs@1.4.0
+├── npm@6.14.8
+└── yo@3.1.1
+
+
+nhipster
+
+	? Which *type* of application would you like to create? Monolithic application (recommended for simple projects)
+	? What is the base name of your application? nhipster32
+	? Which *type* of authentication would you like to use? JWT authentication (stateless, with a token)
+	? Which *production* database would you like to use? MySQL or MariaDB
+	? Which *Framework* would you like to use for the client? React
+	? Would you like to use a Bootswatch theme (https://bootswatch.com/)? Default JHipster
+	? Would you like to enable internationalization support? No
+	? Would you like to install other generators from the JHipster Marketplace? No
+	Git repository initialized.
+	   create .prettierrc
+	   create .prettierignore
+	   create package.json
+	...
+
+_____________
+
+one:
+
+	npm install
+	npm start
+
+two:
+
+	cd server && npm install && npm start
+
+
+works.
+	went to users admin
+	
+=================================================
+	
+nhipster entity kitten
+
+albe@vamp398:/srv/test/jhipstr/nhipster32$ nhipster entity kitten
+INFO! Using JHipster version installed locally in current project's node_modules
+INFO! No custom sharedOptions found within blueprint: generator-jhipster-nodejs at /srv/test/jhipstr/nhipster32/node_modules/generator-jhipster-nodejs
+INFO! No custom commands found within blueprint: generator-jhipster-nodejs at /srv/test/jhipstr/nhipster32/node_modules/generator-jhipster-nodejs
+INFO! Executing jhipster:entity kitten
+INFO! Options: blueprints: nodejs, from-cli: true
+     info Using blueprint generator-jhipster-nodejs for entity subgenerator
+(node:25368) Warning: Accessing non-existent property 'cat' of module exports inside circular dependency
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:25368) Warning: Accessing non-existent property 'cd' of module exports inside circular dependency
+(node:25368) Warning: Accessing non-existent property 'chmod' of module exports inside circular dependency
+(node:25368) Warning: Accessing non-existent property 'cp' of module exports inside circular dependency
+(node:25368) Warning: Accessing non-existent property 'dirs' of module exports inside circular dependency
+(node:25368) Warning: Accessing non-existent property 'pushd' of module exports inside circular dependency
+(node:25368) Warning: Accessing non-existent property 'popd' of module exports inside circular dependency
+(node:25368) Warning: Accessing non-existent property 'echo' of module exports inside circular dependency
+(node:25368) Warning: Accessing non-existent property 'tempdir' of module exports inside circular dependency
+(node:25368) Warning: Accessing non-existent property 'pwd' of module exports inside circular dependency
+(node:25368) Warning: Accessing non-existent property 'exec' of module exports inside circular dependency
+(node:25368) Warning: Accessing non-existent property 'ls' of module exports inside circular dependency
+(node:25368) Warning: Accessing non-existent property 'find' of module exports inside circular dependency
+(node:25368) Warning: Accessing non-existent property 'grep' of module exports inside circular dependency
+(node:25368) Warning: Accessing non-existent property 'head' of module exports inside circular dependency
+(node:25368) Warning: Accessing non-existent property 'ln' of module exports inside circular dependency
+(node:25368) Warning: Accessing non-existent property 'mkdir' of module exports inside circular dependency
+(node:25368) Warning: Accessing non-existent property 'rm' of module exports inside circular dependency
+(node:25368) Warning: Accessing non-existent property 'mv' of module exports inside circular dependency
+(node:25368) Warning: Accessing non-existent property 'sed' of module exports inside circular dependency
+(node:25368) Warning: Accessing non-existent property 'set' of module exports inside circular dependency
+(node:25368) Warning: Accessing non-existent property 'sort' of module exports inside circular dependency
+(node:25368) Warning: Accessing non-existent property 'tail' of module exports inside circular dependency
+(node:25368) Warning: Accessing non-existent property 'test' of module exports inside circular dependency
+(node:25368) Warning: Accessing non-existent property 'to' of module exports inside circular dependency
+(node:25368) Warning: Accessing non-existent property 'toEnd' of module exports inside circular dependency
+(node:25368) Warning: Accessing non-existent property 'touch' of module exports inside circular dependency
+(node:25368) Warning: Accessing non-existent property 'uniq' of module exports inside circular dependency
+(node:25368) Warning: Accessing non-existent property 'which' of module exports inside circular dependency
+(node:25368) Warning: Accessing non-existent property 'cat' of module exports inside circular dependency
+(node:25368) Warning: Accessing non-existent property 'cd' of module exports inside circular dependency
+(node:25368) Warning: Accessing non-existent property 'chmod' of module exports inside circular dependency
+(node:25368) Warning: Accessing non-existent property 'cp' of module exports inside circular dependency
+(node:25368) Warning: Accessing non-existent property 'dirs' of module exports inside circular dependency
+(node:25368) Warning: Accessing non-existent property 'pushd' of module exports inside circular dependency
+(node:25368) Warning: Accessing non-existent property 'popd' of module exports inside circular dependency
+(node:25368) Warning: Accessing non-existent property 'echo' of module exports inside circular dependency
+(node:25368) Warning: Accessing non-existent property 'tempdir' of module exports inside circular dependency
+(node:25368) Warning: Accessing non-existent property 'pwd' of module exports inside circular dependency
+(node:25368) Warning: Accessing non-existent property 'exec' of module exports inside circular dependency
+(node:25368) Warning: Accessing non-existent property 'ls' of module exports inside circular dependency
+(node:25368) Warning: Accessing non-existent property 'find' of module exports inside circular dependency
+(node:25368) Warning: Accessing non-existent property 'grep' of module exports inside circular dependency
+(node:25368) Warning: Accessing non-existent property 'head' of module exports inside circular dependency
+(node:25368) Warning: Accessing non-existent property 'ln' of module exports inside circular dependency
+(node:25368) Warning: Accessing non-existent property 'mkdir' of module exports inside circular dependency
+(node:25368) Warning: Accessing non-existent property 'rm' of module exports inside circular dependency
+(node:25368) Warning: Accessing non-existent property 'mv' of module exports inside circular dependency
+(node:25368) Warning: Accessing non-existent property 'sed' of module exports inside circular dependency
+(node:25368) Warning: Accessing non-existent property 'set' of module exports inside circular dependency
+(node:25368) Warning: Accessing non-existent property 'sort' of module exports inside circular dependency
+(node:25368) Warning: Accessing non-existent property 'tail' of module exports inside circular dependency
+(node:25368) Warning: Accessing non-existent property 'test' of module exports inside circular dependency
+(node:25368) Warning: Accessing non-existent property 'to' of module exports inside circular dependency
+(node:25368) Warning: Accessing non-existent property 'toEnd' of module exports inside circular dependency
+(node:25368) Warning: Accessing non-existent property 'touch' of module exports inside circular dependency
+(node:25368) Warning: Accessing non-existent property 'uniq' of module exports inside circular dependency
+(node:25368) Warning: Accessing non-existent property 'which' of module exports inside circular dependency
+
+The entity kitten is being created.
+
+Generating field #1
+
+? Do you want to add a field to your entity? Yes
+        ? What is the name of your field?   --ctrl-c--
+albe@vamp398:/srv/test/jhipstr/nhipster32$
+
+
+=================================================
+
+
+
+#@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+#@  
+#@  
+#@  
+#@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@   2021-01-22[Jan-Fri]17-23PM 
+
+
+The entity kitten is being created.
+
+================= Kitten =================
+Fields
+name (String)
+color (String)
+
+Generating field #3
+
+? Do you want to add a field to your entity? No
+
+================= Kitten =================
+Fields
+..
+
+Generating relationships to other entities
+
+? Do you want to add a relationship to another entity? No
+
+================= Kitten =================
+Fields
+name (String)
+color (String)
+size (String)
+
+_____________
+
+
+? Do you want to use separate service class for your business logic? Yes, generate a separate service class
+? Do you want to use a Data Transfer Object (DTO)? No, use the entity directly
+? Do you want to add filtering? Dynamic filtering for the entities with JPA Static metamodel
+? Is this entity read-only? No
+? Do you want pagination on your entity? Yes, with pagination links
+
+Everything is configured, generating the entity...
+
+   create .jhipster/Kitten.json
+   create server/src/domain/kitten.entity.ts
+   create server/src/module/kitten.module.ts
+   create server/src/repository/kitten.repository.ts
+   create server/src/service/kitten.service.ts
+   create server/src/service/dto/kitten.dto.ts
+   create server/src/service/mapper/kitten.mapper.ts
+   create server/src/web/rest/kitten.controller.ts
+   create server/e2e/kitten.e2e-spec.ts
+ conflict server/src/app.module.ts
+? Overwrite server/src/app.module.ts? overwrite this and all others
+    force server/src/app.module.ts
+   create src/main/webapp/app/entities/kitten/kitten-detail.tsx
+   create src/main/webapp/app/entities/kitten/kitten.tsx
+   create src/main/webapp/app/entities/kitten/kitten.reducer.ts
+   create src/main/webapp/app/entities/kitten/index.tsx
+   create src/main/webapp/app/shared/model/kitten.model.ts
+   create src/main/webapp/app/entities/kitten/kitten-delete-dialog.tsx
+   create src/main/webapp/app/entities/kitten/kitten-update.tsx
+   create src/test/javascript/spec/app/entities/kitten/kitten-reducer.spec.ts
+   create src/test/javascript/e2e/entities/kitten/kitten.page-object.ts
+   create src/test/javascript/e2e/entities/kitten/kitten.spec.ts
+   create src/test/javascript/e2e/entities/kitten/kitten-update.page-object.ts
+    force src/main/webapp/app/entities/index.tsx
+    force src/main/webapp/app/shared/reducers/index.ts
+    force src/main/webapp/app/shared/layout/menus/entities.tsx
+
+Running `webpack:build` to update client app
+
+Entity Kitten generated successfully.
+
+> nhipster-32@0.0.1-SNAPSHOT webpack:build /srv/test/jhipstr/nhipster32
+> npm run cleanup && npm run webpack:build:main
+
+ DONE  Compiled successfully in 35739ms                                                                                                                                                                                                                                          5:30:51 PM
+
+   1099 modules
+INFO! Congratulations, JHipster execution is complete!
+albe@vamp398:/srv/test/jhipstr/nhipster32$
+
+
+
+#@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+#@  
+#@  
+#@  
+#@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@   2021-01-22[Jan-Fri]17-35PM 
+
+
+client 
+
+	[HPM] Proxy created: [
+	  '/api',
+	  '/services',
+	  '/management',
+	  '/swagger-resources',
+	  '/v2/api-docs',
+	  '/h2-console',
+	  '/auth'
+	Webpack: Starting ...
+	Webpack: Starting ...
+
+_____________
+
+server:
+
+
+	[nodemon] 1.19.1
+	[nodemon] to restart at any time, enter `rs`
+	[nodemon] watching: /srv/test/jhipstr/nhipster32/server/src/**/*
+	[nodemon] starting `ts-node src/main.ts`
+	[Nest] 3180   - 01/22/2021, 5:35:27 PM   [Config] Actual process.env.NODE_ENV value: dev
+	[Nest] 3180   - 01/22/2021, 5:35:27 PM   [Config] Standard allowed values are: dev, test or prod
+	[Nest] 3180   - 01/22/2021, 5:35:30 PM   [NestFactory] Starting Nest application... +3581ms
+	[Nest] 3180   - 01/22/2021, 5:35:31 PM   [ExceptionHandler] Nest cannot create the AppModule instance.
+	The module at index [3] of the AppModule "imports" array is undefined.
+
+	Potential causes:
+	- A circular dependency between modules. Use forwardRef() to avoid it. Read more: https://docs.nestjs.com/fundamentals/circular-dependency
+	- The module at index [3] is of type "undefined". Check your import statements and the type of the module.
+
+	Scope [] +70ms
+	Error: Nest cannot create the AppModule instance.
+	The module at index [3] of the AppModule "imports" array is undefined.
+
+	Potential causes:
+	- A circular dependency between modules. Use forwardRef() to avoid it. Read more: https://docs.nestjs.com/fundamentals/circular-dependency
+	- The module at index [3] is of type "undefined". Check your import statements and the type of the module.
+
+	Scope []
+		at DependenciesScanner.scanForModules (/srv/test/jhipstr/nhipster32/server/node_modules/@nestjs/core/scanner.js:45:23)
+		at process._tickCallback (internal/process/next_tick.js:68:7)
+		at Function.Module.runMain (internal/modules/cjs/loader.js:757:11)
+		at Object.<anonymous> (/srv/test/jhipstr/nhipster32/server/node_modules/ts-node/src/bin.ts:154:12)
+		at Module._compile (internal/modules/cjs/loader.js:701:30)
+		at Object.Module._extensions..js (internal/modules/cjs/loader.js:712:10)
+		at Module.load (internal/modules/cjs/loader.js:600:32)
+		at tryModuleLoad (internal/modules/cjs/loader.js:539:12)
+		at Function.Module._load (internal/modules/cjs/loader.js:531:3)
+		at Function.Module.runMain (internal/modules/cjs/loader.js:754:12)
+	[nodemon] app crashed - waiting for file changes before starting...
+
+
+=================================================
+
+error summary..
+
+
+Nest cannot create the AppModule instance. The module at index [3] of the AppModule "imports" array is undefined. 
+Potential causes: - A circular dependency between modules. Use forwardRef() to avoid it. 
+
+The module at index  of the AppModule imports array is undefined
+
+
+--
+
+https://github.com/jhipster/generator-jhipster-nodejs/issues/193
+
+
+ans.
+
+
+remove comma.
+
+
+index 9392d9a..71cd9a5 100644
+--- a/server/src/app.module.ts
++++ b/server/src/app.module.ts
+@@ -16,7 +16,7 @@ import { KittenModule } from './module/kitten.module';
+       rootPath: config.getClientPath()
+     }),
+     AuthModule,
+-    ,
++
+     KittenModule
+     // jhipster-needle-add-entity-module-to-main - JHipster will add entity modules here, do not remove
+   ],
+albe@vamp398:/srv/test/jhipstr/nhipster32$
+
+
+now all works.
+
+
+=================================================
+
+
+http://192.168.88.60:3000
+http://192.168.88.60:9000
+http://192.168.88.60:8081/api/v2/api-docs/
+
+
+=================================================

@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    // dgleba dev
+    // dgleba run dev server using docker
     "dev": "bash sh-dev.sh",
 
     "serve": "vue-cli-service serve",
