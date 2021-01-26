@@ -104,7 +104,10 @@ class PostModelApi(ModelRestApi):
     add_columns =  [ 'title', 'body', 'created_at', 'updated_at', ]
     edit_columns = [ 'title', 'body', 'created_at', 'updated_at', ]
     show_columns = [ 'id', 'title', 'body', 'created_at', 'updated_at', ]
+    #
     # add id to list columns to have id in the result json dgleba 2021-01-11
+    # this is needed so id is with the json data. id is needed to be able to update a record.
+    #
     list_columns = [ 'id', 'title', 'body', 'created_at', 'updated_at', ]
 
 appbuilder.add_api(PostModelApi)

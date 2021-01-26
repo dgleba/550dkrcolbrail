@@ -1,4 +1,47 @@
 
+
+
+status:
+
+
+ works.
+
+
+
+This may be the newest version of postsmanager.vue
+
+  sftp://192.168.88.60/srv/dkr/550dkrcolbrail/vue-eg-552-yards/vue-eg-552-b-yard/vue-eg-552cfab/src/components/PostsManager%20%28may%20be%20newest%20rev.%201.26.2021%204.37.47%20PM%29.vue
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+#@  
+#@  older below..
+#@  
+#@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@   2021-01-26[Jan-Tue]16-39PM 
+
+
+
+
+
 status:
 
 

@@ -52,7 +52,7 @@ frontend
 
     sftp://192.168.88.60/srv/dkr/550dkrcolbrail/vue-eg-552-yards/vue-eg-552-b-yard/vue-eg-552cdjango
     [to start: yarn dev]
-    [works: login, CRUD, errors - 2021-01-10_Sun_14.57-PM]
+    [works: login, CRUD,  errors messages to user ok.  - 2021-01-10_Sun_14.57-PM]
 
 
 
@@ -67,7 +67,9 @@ backend
 frontend
 
 
+    This may be the newest version.
+
     sftp://192.168.88.60/srv/dkr/550dkrcolbrail/vue-eg-552-yards/vue-eg-552-b-yard/vue-eg-552cfab
-    [json responses are different. still working out how to use them.]
+    [works.]
         [to start: yarn dev]
 

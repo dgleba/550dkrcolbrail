@@ -36,6 +36,9 @@ class Pfeature(Model):
     def __repr__(self):
         return self.name
 
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
 class Post(Model):
     id = Column(Integer, primary_key=True)
     title = Column(String(250),  nullable=True)
@@ -46,6 +49,9 @@ class Post(Model):
 
     def __repr__(self):
         return self.title
+
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
 
 
 class Contact(Model):
