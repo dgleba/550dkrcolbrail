@@ -2,13 +2,16 @@
 
 
 works.
-but.
+
+good.
+sftp://192.168.88.60/srv/dkr/550dkrcolbrail/vue-eg-552-yards/b465djamware-vueauth/b465vueauth
+
 
 
 2021-01-26
 I think 
 	sftp://192.168.88.60/srv/dkr/550dkrcolbrail/vue-eg-552-yards/vue-eg-552-b-yard/vue-eg-552cfab 
-	is better.
+	is better for some respects. It depends on the needs.
 
 
 
