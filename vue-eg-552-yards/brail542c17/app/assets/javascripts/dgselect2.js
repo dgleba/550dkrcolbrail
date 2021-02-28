@@ -3,3 +3,9 @@ $(function() {
   $(".dgselect2").select2({
    });	
 });
+
+$(function() {
+  $(".dgselect2createoption").select2({ 
+    tags: true
+   });	
+});
