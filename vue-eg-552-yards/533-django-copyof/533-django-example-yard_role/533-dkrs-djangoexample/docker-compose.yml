@@ -1,6 +1,7 @@
 version: "3.6"
 services:
   djdev:
+    # http://192.168.88.60:6461/
     build: ./mangosite
     restart: on-failure
     working_dir: /code
@@ -21,7 +22,8 @@ services:
       - 499d-django_default      
   
   adminerd:
-    # 10.4.1.231:6117/
+    # http://10.4.1.231:14123/
+    # http://192.168.88.60:14123/
     # image: adminer:4.7
     # image: dockette/adminer:full
     image: dgleba/adminer-sqlite:one

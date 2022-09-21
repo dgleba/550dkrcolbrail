@@ -87,15 +87,12 @@ export default {
       access_token:"",
       t_errors:[],
       Post_form_is_hidden: true,
-      polling: null
     }
   },
   async created () {
     console.log(`${process.env.VUE_APP_BACKEND_URL}/`);
-    this.refreshPosts();
-    this.pollData();
+    this.refreshPosts()
   },
-
   methods: {
     async refreshPosts () {
       this.loading = true // for original alert
@@ -104,15 +101,6 @@ export default {
       this.loading = false
       this.showoverlay = false
     },
-
-    //  poll the api every x seconds to get updated data..
-    // https://renatello.com/vue-js-polling-using-setinterval/
-    pollData () {
-      this.polling = setInterval(() => {
-        this.refreshPosts()
-      }, 2000)
-    }, 
-
     async populatePostToEdit (post) {
       this.Post_form_is_hidden = false
       this.model = Object.assign({}, post)
@@ -189,10 +177,6 @@ export default {
     }
     // end backend api urls..
 
-  },
-  beforeDestroy () {
-    clearInterval(this.polling)
   }
-  
 }
 </script>

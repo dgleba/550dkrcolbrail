@@ -55,7 +55,7 @@
               </td>
               <td>{{ post.id }}</td>
               <td>{{ post.title }}</td>
-              <td>{{ post.last_updated }}</td>
+              <td>{{ post.updated_at }}</td>
               <td><a href="#" @click.prevent="deletePost(post.id)"> &nbsp; Delete</a></td>
             </tr>
           </tbody>
@@ -76,26 +76,22 @@ import axios from 'axios'
     json: true
   });
 
-
 export default {
   data () {
     return {
       loading: false,
       posts: [],
+      result: [],
       model: {},
       show: false,
       access_token:"",
       t_errors:[],
       Post_form_is_hidden: true,
-      polling: null
     }
   },
   async created () {
-    console.log(`${process.env.VUE_APP_BACKEND_URL}/`);
-    this.refreshPosts();
-    this.pollData();
+    this.refreshPosts()
   },
-
   methods: {
     async refreshPosts () {
       this.loading = true // for original alert
@@ -104,15 +100,6 @@ export default {
       this.loading = false
       this.showoverlay = false
     },
-
-    //  poll the api every x seconds to get updated data..
-    // https://renatello.com/vue-js-polling-using-setinterval/
-    pollData () {
-      this.polling = setInterval(() => {
-        this.refreshPosts()
-      }, 2000)
-    }, 
-
     async populatePostToEdit (post) {
       this.Post_form_is_hidden = false
       this.model = Object.assign({}, post)
@@ -156,12 +143,21 @@ export default {
         }
       })
       .then(req => {
+        // console log - show raw data returned from the api..
+        // if last arg is '' empty then it's all one string. if two spaces then indented two spaces.
+        console.log ('executereqdata', JSON.stringify(req.data, null, '' ) )
+        //
+        // our `post model` json data is in `result` within the overall json response data from fab.
+        //
         return req.data.results
       })
       .catch(e => {
-        console.log("posts ~147");
-        console.log(e);
+        console.log("posts ~153", e);
+        // console.log(e);
         this.t_errors.push(e);
+        //
+        // use boostrap toast to show error for the user.
+        //
         this.$bvToast.toast(` ${e}`, {variant: 'danger', autoHideDelay: 15000 });
         if (e.response.status === 401) {
           router.push({
@@ -171,9 +167,14 @@ export default {
       });
     },
 
-    // backend api urls..
+    //
+    // backend api urls. Edit them here to match up with the backend api.
+    // ip address and port are in .env file.
+    //
     getPosts () {
-      return this.execute('get', '/blogapp/api/v1/Post/')
+      let getallresp = this.execute('get', '/blogapp/api/v1/Post/')
+      // console.log(getallresp)
+      return getallresp
     },
     getPost (id) {
       return this.execute('get', `/blogapp/api/v1/Post/${id}`)
@@ -182,17 +183,16 @@ export default {
       return this.execute('post', '/blogapp/api/v1/Post/', data)
     },
     updatePost (id, data) {
-      return this.execute('put', `/blogapp/api/v1/Post/${id}/`, data)
+      // strip id out of the data json object
+      console.log('data.toupdatepost',data)  
+      delete data['id']
+      return this.execute('put', `/blogapp/api/v1/Post/${id}`, data)
     },
     dodeletePost (id) {
       return this.execute('delete', `/blogapp/api/v1/Post/${id}`)
     }
     // end backend api urls..
 
-  },
-  beforeDestroy () {
-    clearInterval(this.polling)
   }
-  
 }
 </script>

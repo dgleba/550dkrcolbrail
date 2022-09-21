@@ -9,4 +9,4 @@ class PostViewSet(viewsets.ModelViewSet):
 
     queryset = models.Post.objects.all()
     serializer_class = serializers.PostSerializer
-    permission_classes = [permissions.IsAuthenticated]
+    # permission_classes = [permissions.IsAuthenticated]
